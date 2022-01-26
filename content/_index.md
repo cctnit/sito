@@ -22,5 +22,7 @@ frasi:
     autore: "Paolo Coelho"
   - frase: "“La meta è partire”"
     autore: "Giuseppe Ungaretti"
+  - frase: "“Le persone non fanno i viaggi, sono i viaggi che fanno le persone”"
+    autore: "John Steinbeck"
  
 ---
