@@ -1,0 +1,76 @@
+<!-- JS Plugins + Main script -->
+{{ $scripts := slice }}
+{{ range site.Params.plugins.js}}
+{{ if findRE "^http" .link }}
+<script src="{{ .link | absURL }}"></script>
+{{ else }}
+  {{ $scripts = $scripts | append (resources.Get .link) }}
+{{ end }}
+{{ end }}
+{{ $scripts := $scripts | append (resources.Get "js/script.js" | minify) }}
+{{ $scripts := $scripts | resources.Concat "/js/vendor.js" | minify | fingerprint "sha512" }}
+<script crossorigin="anonymous" defer="defer" integrity="{{ $scripts.Data.Integrity }}" type="application/javascript">{{$scripts.Content | safeJS}}</script>
+
+<script>
+    if(document.title == "Eventi | Camper Club Torre Natisone"){
+     var today = new Date();
+     var dd = String(today.getDate()).padStart(2, '0');
+     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+     var yyyy = today.getFullYear();
+     today = yyyy + '-' + mm + '-' + dd;
+     const eventi = document.querySelectorAll('[data-evento="evento"]');
+     const diveventipassati = document.getElementById("eventipassati");
+     var numeventipassati = 0
+     eventi.forEach(function(elemento) {
+      if(elemento.dataset.dataevento < today){
+         numeventipassati = numeventipassati + 1
+      }
+     });
+     if(numeventipassati >= 3){numeventipassati = 3}
+     eventi.forEach(function(elemento) {
+      if((elemento.dataset.dataevento < today) && (numeventipassati != 0)){
+        diveventipassati.before(elemento)
+        numeventipassati = numeventipassati - 1
+      } else if(elemento.dataset.dataevento < today)  {
+         elemento.parentNode.removeChild(elemento)
+      }
+     });
+    };
+  </script>
+
+<script type="text/javascript">
+  if(document.title == "Camper Club Torre Natisone"){
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    window.onload= function () {
+    setInterval(function(){ 
+        plusSlides(1);
+    }, 6000);
+    }
+
+  };
+</script>

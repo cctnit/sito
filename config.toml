@@ -1,0 +1,112 @@
+baseURL = 'https://cctnit.github.io/'
+languageCode = 'it-it'
+title = 'Camper Club Torre Natisone'
+theme = "ananke"
+DefaultContentLanguage = "it"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "chisiamo"
+    name = "Chi Siamo"
+    url = "/chi-siamo/"
+    weight = 2
+    haschildren = true
+    [[menu.main]]
+       parent = "chisiamo"
+       name = "Link Amici"
+       url = "/chi-siamo/link-amici"
+       weight = 1
+  [[menu.main]]
+    name = "Eventi"
+    url = "/eventi/"
+    weight = 3
+  [[menu.main]]
+    name = "I Nostri Viaggi"
+    url = "/i-nostri-viaggi/"
+    weight = 4
+  [[menu.main]]
+    identifier = "photogallery"
+    name = "Photo Gallery"
+    url = "/gallery/"
+    weight = 5
+    haschildren  = true
+       [[menu.main]]
+       parent = "photogallery"
+       name = "Photo Gallery 2021"
+       url = "/gallery/photo-gallery-2021"
+       weight = 1
+       [[menu.main]]
+       parent = "photogallery"
+       name = "Photo Gallery 2020"
+       url = "/gallery/photo-gallery-2020"
+       weight = 2
+       [[menu.main]]
+       parent = "photogallery"
+       name = "Photo Gallery 2019"
+       url = "/gallery/photo-gallery-2019"
+       weight = 3
+       [[menu.main]]
+       parent = "photogallery"
+       name = "Photo Gallery 2018"
+       url = "/gallery/photo-gallery-2018"
+       weight = 4
+      [[menu.main]]
+       parent = "photogallery"
+       name = "Photo Gallery 2017"
+       url = "/gallery/photo-gallery-2017"
+       weight = 5
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 6
+  [[menu.main]]
+    name = "Contatti"
+    url = "/contatti/"
+    weight = 7
+  
+
+[params]
+  author = "CCTN"
+  favicon = "/images/favicon.ico"
+  site_logo = "/images/loghino.png"
+  description = ""
+  date_format = "02/01/2006"
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  # colore intestazioni vecchio sito #6666a4
+  background_color_class = "bg-dark-gray"
+  cover_dimming_class = "bg-black-10"
+  featured_image = "/images/Home.jpg"
+  recent_posts_number = 3
+  # custom_css = ["custom.css"]
+  indirizzo_footer = "indirizzo: via Cividale 21- 33042 Buttrio (UD) - C.F. 9414372301"
+  cctntags = ["uscite nazionali", "uscite internazionali", "comunicazioni", "eventi"]
+  custom_css = ["css/solid.min.css", "css/fontawesome.min.css", "css/custom.css"]
+  # search
+  search = true
+  searchSections = ["blog","eventi","i-nostri-viaggi"]
+  # main section
+  mainSections = ["blog"]
+
+############################## scripts ##############################
+# JS scripts
+[[params.plugins.js]]
+  link = "js/jquery.min.js"
+[[params.plugins.js]]
+  link = "js/fuse.min.js"
+[[params.plugins.js]]
+  link = "js/mark.js"
+[[params.plugins.js]]
+  link = "js/search.js"
+[[params.plugins.js]]
+  link = "js/infiniteslidev2.js"
+
+[[params.ananke_socials]]
+  name = "facebook"
+  url = "https://www.facebook.com/CamperClubTorreNatisone"

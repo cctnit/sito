@@ -1,0 +1,10 @@
+<ul class="pa0 flex-l">
+    {{ range .Site.Params.cctntags }}
+     <li class="list">
+       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="link f6 dim no-underline br3 ba ph3 pv2 mb2 dib white-70 sans-serif">
+         {{- . -}}
+       </a>
+     </li>
+    {{ end }}
+  </ul>
+  

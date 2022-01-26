@@ -1,0 +1,12 @@
+<footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
+  <div class="white-70">Tags</div>
+  <div>{{ partial "site-footer-tags.html" . }}</div>
+  <div class="white-70 center">{{ .Site.Params.indirizzo_footer }} <a href="https://www.buri.it"><img src="/images/buri_piccola.png" class="w100 mw4-ns v-mid" /></a></div>
+  <div class="ttu">{{ partial "site-navigation-footer.html" . }}</div>
+  <div ><a class="link f5 no-underline br-2 ph3 pv2 mb2 dib white-70 sans-serif" href="/privacy-policy">Privacy Policy</a></div>
+  <div class="flex justify-between">
+    <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
+      &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+    </a>
+  </div>
+</footer>

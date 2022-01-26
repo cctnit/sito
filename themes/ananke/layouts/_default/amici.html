@@ -1,0 +1,77 @@
+{{define "main"}}
+
+<section>
+  <div class="container">
+    <div class="pa3 pa4-ns w-100 w-70-ns w-100-m center">
+           <h2>Club Amici</h2>
+        <div class="cf pa2">
+        
+        {{ if .Params.amici.enable }}
+        {{ with .Params.amici }}
+         {{ range .item }}
+          <div class="fl w-100-m w-30-l pa2">
+          <a class="db link dim tc" href="{{.link | safeURL}}">
+              <img class="db black-10" src="{{.am_img}}">
+            </a>
+            <p class="tc"> <span class="f3">{{.title}}</span><br>
+            {{.alt}}
+          </div>
+          {{end}}
+         {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    <div class="pa3 pa4-ns w-100 w-70-ns w-100-m center">
+          <h2>I nostri partner</h2>
+        <div class="cf pa2">
+   
+        {{ if .Params.partners.enable }}
+        {{ with .Params.partners }}
+        {{ $scratch := newScratch }}
+        {{ $scratch.Set "riga" 1}}
+          {{ range .item }}
+          {{ if eq ($scratch.Get "riga")  1 }}
+            <div class="cf">
+          {{ end }}
+          <div class="fl w-100-m w-20-l pa2">
+          <a class="db link w-100-m dim tc" href="{{.link | safeURL}}">
+              <img class="db black-10" src="{{.bottone_img}}">
+            </a>
+            <p class="f6-m"> <span class="f3-l f6-m">{{.title}}</span><br>
+            {{.alt}}</p>
+          </div>
+          {{ $scratch.Add "riga" 1 }}
+          {{ if eq ($scratch.Get "riga") 6 }}
+            </div>
+            {{ $scratch.Set "riga" 1 }}
+            {{ end }}
+          {{ end }}
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+      </div>
+      <div class="pa3 pa4-ns w-100 w-70-ns center">
+           <h2>Riviste e altri link</h2>
+          <div class="cf pa2">
+
+            {{ if .Params.riviste.enable }}
+            {{ with .Params.riviste }}
+            {{ range .item }}
+            <div class="fl w-50 w-100-m w-30-l pa2">
+            <a class="db link dim tc" href="{{.link | safeURL}}">
+                <img class="w-100 db black-10" src="{{.riv_img}}">
+              </a>
+              <p class="tc"> <span class="f3">{{.title}}</span><br>
+              {{.alt}}
+            </div> 
+            {{end}}
+            {{ end }}
+            {{ end }}
+          </div>
+       </div>
+    
+  </div>
+</section>
+
+{{end}}

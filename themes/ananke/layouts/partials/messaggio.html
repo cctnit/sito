@@ -1,0 +1,11 @@
+<div id="messaggio">
+
+    {{ with .Site.GetPage "//messaggio.md" }}
+      {{ if .Params.messaggio.enable }}
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+      {{ end }}
+    {{ end }}
+</div>
+
+

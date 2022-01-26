@@ -1,0 +1,39 @@
+{{define "main"}}
+
+<section>
+  <div class="container">
+    <div class="pa3 pa4-ns w-100 w-70-ns center">
+           <h2>{{- .Title -}}</h2>
+        <div class="cf pa2">
+        
+        {{ if .Params.album.enable }}
+          {{ with .Params.album }}
+            {{ $scratch := newScratch }}
+            {{ $scratch.Set "riga" 1}}
+            {{ range .item }}
+              {{ if eq ($scratch.Get "riga")  1 }}
+                <div class="cf">
+              {{ end }}
+              <div class="fl w-100-m w-30-l pa2">
+              <a class="db link dim tc" href="{{.link | safeURL}}">
+                  <img class="w-100 w-100-m db outline black-10" src="{{.album_img}}" alt="{{.alt}}">
+                  <p class="tc f3">{{.title}}</p>
+                </a>
+              </div>
+              {{ $scratch.Add "riga" 1 }}
+              {{ if eq ($scratch.Get "riga") 4 }}
+                </div>
+                {{ $scratch.Set "riga" 1 }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+            </div>
+        {{end}}
+      </div>
+    </div>
+    
+    
+  </div>
+</section>
+
+{{end}}

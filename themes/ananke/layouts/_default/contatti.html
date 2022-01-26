@@ -1,0 +1,45 @@
+{{define "main"}}
+
+<section>
+  <div class="container">
+    <div class="pa3 pa4-ns w-100 w-90-ns center">
+           <h2>{{- .Title -}}</h2>
+        <div class="cf pa2">
+        
+        {{ if .Params.contatti.enable }}
+          {{ with .Params.contatti }}
+          <div class="w-100 fl bg-light-silver h4 tc">
+            <div class="pa4">
+              <span class="white-70 f2">Chiamaci: <i id="telefono" class="fas fa-phone"></i></span><br>
+              <span class="white-70 f4"><a href="tel:{{ .telefono }}" class="no-underline white-70">{{ .telefono }}</a></span>
+            </div>
+          </div>
+          <div class="w-100 fl bg-light-silver h4 tc">
+            <div class="pa4">
+            <span class="white-70 f2">Vieni a trovarci<i id="indirizzo" class="fas fa-handshake" style="size: 3em"></i></span><br>
+            <span class="white-70 f4">{{ .indirizzo }}</span>
+            </div>
+          </div>
+          <div class="w-100 fl bg-light-silver h4 tc">
+            <div class="pa4">
+              <span class="white-70 f2">Scrivici: <i id="mail" class="fas fa-at" style="size: 3em"></i> </span><br>
+              <span class="white-70 f4"><a href="mailto:{{ .email }}" class="no-underline white-70">{{ .email }}</a></span>
+            </div> 
+          </div>
+          
+          
+              <a href="{{ .mappa }}"> <img src="/contatti/mappaSede.jpg" class="mv3 w-100" > </a> 
+              <p class="tc">Clicca sull'immagine per accedere a Google Maps</p>
+          
+          
+              {{ end }}
+            </div>
+           
+           
+        {{end}}
+      </div>
+    </div>    
+  </div>
+</section>
+
+{{end}}
