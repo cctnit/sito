@@ -37,8 +37,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
           external_repository: cctnit/cctnit.github.io
           publish_dir: ./public
