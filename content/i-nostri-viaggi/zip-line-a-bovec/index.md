@@ -11,7 +11,7 @@ tags: ["avventura"]
 
 {{< figure src="discesaZipLine.jpg" >}}
 
-Una fantastica discesa su una delle più eccitanti [Zip Line in Europa](https://photos.app.goo.gl/5ZAAKbXfxZAYymdy7).
+Una fantastica discesa su una delle più eccitanti [Zip Line in Europa](https://photos.google.com/share/AF1QipMopTi9bUpbs-R7N9uivSEaAsynUfhWT4b92gdWVBCHTLUfWhrVnxusQw5DIJoxMg/photo/AF1QipOAMQpsDJkLeOiJBYmKJ7yQxdFwcqui20YsxHnb?key=Q0JKYVhEc0EyRU4wOVZ5UE0zRlozal80aGw5dEhB).
 
 ---
 
