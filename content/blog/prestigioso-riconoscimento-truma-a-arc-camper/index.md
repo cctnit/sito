@@ -10,4 +10,4 @@ url: '/prestigioso-riconoscimento-truma-a-arc-camper/'
 
 Il nostro socio Francesco Morettin di Arc Camper è stato insignito di un prestigioso riconoscimento per la ventennale collaborazione dalla ditta Truma Gerätetechnik GmbH und Co. KG in occasione del Salone del Camper di Parma 2019.
 
-[Le foto della premiazione](https://photos.app.goo.gl/aEeppBW169U4BMxUA).
+[Le foto della premiazione qualcosa](https://photos.app.goo.gl/aEeppBW169U4BMxUA).
