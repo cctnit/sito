@@ -5,6 +5,7 @@ draft: false
 tags: ["comunicazioni"]
 summary: "Programma del Pranzo di Natale 2021"
 featured_image: '/blog/pranzo-di-natale-2021/pranzo-e-cena-di-natale.jpg'
+url: '/pranzo-di-natale-2021/'
 ---
 
 {{< figure src="PranzoNatale2021.jpg" title="Locandina Pranzo di Natale 2021" class="w-50 fr" >}}

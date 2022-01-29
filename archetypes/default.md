@@ -4,5 +4,5 @@ date: {{ .Date }}
 draft: true
 summary: ""
 tags: ["comunicazioni"]
+url: "/{{ replace .Name "-" "-" | title | lower }}/"
 ---
-

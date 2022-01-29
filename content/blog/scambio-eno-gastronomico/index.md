@@ -5,6 +5,7 @@ draft: false
 featured_image: '/blog/scambio-eno-gastronomico/scambioculturaleCastelSanPietro.jpg'
 summary: "Durante la giornata di ieri e di oggi abbiamo avuto la gradita visita di ..."
 tags: ["comunicazioni"]
+url: '/scambio-eno-gastronomico/'
 ---
 
 {{< figure src="scambioculturaleCastelSanPietro.jpg" alt="con gli ospiti della Pro-Loco di Castel San Pietro Terme" class="w-60 fl" >}}

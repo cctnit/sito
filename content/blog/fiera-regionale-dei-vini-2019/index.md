@@ -5,6 +5,7 @@ draft: false
 featured_image: "/blog/fiera-regionale-dei-vini-2019/BicchiereBuri.jpg"
 summary: "La piccola città di **Buttrio** ha ospitato l'**87esima Fiera Regionale dei Vini**, la più antica in Italia ..."
 tags: ["comunicazioni"]
+url: '/fiera-regionale-dei-vini-2019/'
 ---
 
 {{< figure src="BicchiereBuri.jpg" alt="il taiut simbolo della Fiera" class="w-40 fl" >}}La piccola città di **Buttrio** ha ospitato l'**87esima Fiera Regionale dei Vini**, la più antica in Italia.

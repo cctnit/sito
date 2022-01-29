@@ -4,6 +4,7 @@ date: 2018-05-02T11:35:21+01:00
 draft: false
 summary: "Il Consiglio Comunale ha deliberato il Regolamento per l' area attrezzata ..."
 tags: ["comunicazioni"]
+url: '/regolamento-dellarea-attrezzata-di-sosta-camper-di-buttrio/'
 ---
 
 {{< figure src="AreaSostaCamperButtrio.jpg" alt="Area sosta camper attrezzata di Buttrio" class="w-auto" >}}

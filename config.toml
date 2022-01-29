@@ -3,6 +3,8 @@ languageCode = 'it-it'
 title = 'Camper Club Torre Natisone'
 theme = "ananke"
 DefaultContentLanguage = "it"
+googleAnalytics = ""
+enableRobotsTXT = false
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]

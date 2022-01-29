@@ -5,6 +5,7 @@ draft: false
 featured_image: "/blog/programma-di-massima-2020/Programma2020.jpg"
 summary: "Programma di massima per l'anno 2020 ..."
 tags: ["comunicazioni"]
+url: '/programma-di-massima-2020/'
 ---
 
 {{< figure src="Programma2020.jpg" alt="Calendario Programma 2020" class="w-70 fl" >}}

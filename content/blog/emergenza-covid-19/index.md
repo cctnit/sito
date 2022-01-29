@@ -5,6 +5,7 @@ draft: false
 featured_image: "/blog/emergenza-covid-19/Covid19.jpg"
 summary: "In ottemperanza alle disposizioni del Ministero della Salute, comunichiamo che ogni attività sociale del CCTN viene sospesa fino a nuovo ordine ..."
 tags: ["comunicazioni"]
+url: '/emergenza-covid-19/'
 ---
 
 

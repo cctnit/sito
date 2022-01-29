@@ -5,6 +5,7 @@ draft: false
 featured_image: "/blog/citazione-sul-numero-di-febbraio-di-plein-air/Plein-Air-febbraio-2020.jpg"
 summary: "Piccola citazione nel numero di Febbraio 2020 di Plein Air ..."
 tags: ["comunicazioni"]
+url: '/citazione-sul-numero-di-febbraio-di-plein-air/'
 ---
 
 Piccola citazione nel numero di Febbraio 2020 di Plein Air, in occasione del famoso Carnevale di Ivrea e la battaglia delle arance: noi ci saremo.

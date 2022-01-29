@@ -5,6 +5,7 @@ draft: false
 featured_image: '/blog/convocazione-assemblea-soci-2020/assembleaSoci.jpg'
 summary: "Le disposizioni governative emanate a causa della pandemia denominata “Covid19” vietano l’assembramento di più persone ..."
 tags: ["comunicazioni"]
+url: '/convocazione-assemblea-soci-2020/'
 ---
 
 Le disposizioni governative emanate a causa della pandemia denominata “Covid19” vietano l’assembramento di più persone, quindi le riunioni non sono concesse; in alternativa è possibile effettuare assemblee con più persone tramite collegamento “streaming” – via internet; di conseguenza i Soci del Camper Club Torre-Natisone sono convocati in assemblea ordinaria in prima convocazione il giorno 23 giugno 2020 alle ore 23.30 e, all’occorrenza, in seconda convocazione il giorno **mercoledì 24 giugno 2020 - alle ore 18.00** per esaminare il seguente ordine del giorno:

@@ -1,4 +1,5 @@
 # cartelle da ignorare
-
+themes/ananke/exampleSite
+themes/ananke/images
 themes/bookworm-light
 public
