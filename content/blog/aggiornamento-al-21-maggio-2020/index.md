@@ -2,7 +2,7 @@
 title: "Aggiornamento al 21 maggio 2020"
 date: 2020-05-23T15:32:07+01:00
 draft: false
-featured_image: "/blog/aggiornamento-al-21-maggio-2020/Faq20Maggio2020.jpg"
+featured_image: "/aggiornamento-al-21-maggio-2020/Faq20Maggio2020.jpg"
 summary: "In ottemperanza ai decreti regionali e nazionali in merito al contenimento del Covid-19 ..."
 tags: ["comunicazioni"]
 url: '/aggiornamento-al-21-maggio-2020/'

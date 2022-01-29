@@ -2,7 +2,7 @@
 title: "Siamo con Zio Pino Baskin Udine"
 date: 2020-08-04T15:12:00+01:00
 draft: false
-Featured_image: "/blog/siamo-con-zio-pino-baskin-udine/ZioPinoBaskinUdine.jpg"
+Featured_image: "/siamo-con-zio-pino-baskin-udine/ZioPinoBaskinUdine.jpg"
 tags: ["comunicazioni"]
 url: '/siamo-con-zio-pino-baskin-udine/'
 ---

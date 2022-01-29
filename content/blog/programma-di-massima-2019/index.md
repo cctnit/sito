@@ -2,7 +2,7 @@
 title: "Programma Di Massima 2019"
 date: 2018-12-14T11:22:05+01:00
 draft: false
-featured_image: "/blog/programma-di-massima-2019/Programma2019.jpg"
+featured_image: "/programma-di-massima-2019/Programma2019.jpg"
 summary: "Programma di massima per l'anno 2019 ..."
 tags: ["comunicazioni"]
 url: '/programma-di-massima-2019/'

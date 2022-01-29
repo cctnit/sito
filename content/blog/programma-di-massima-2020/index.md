@@ -2,7 +2,7 @@
 title: "Programma di massima 2020"
 date: 2020-01-28T16:08:21+01:00
 draft: false
-featured_image: "/blog/programma-di-massima-2020/Programma2020.jpg"
+featured_image: "/programma-di-massima-2020/Programma2020.jpg"
 summary: "Programma di massima per l'anno 2020 ..."
 tags: ["comunicazioni"]
 url: '/programma-di-massima-2020/'

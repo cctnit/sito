@@ -2,7 +2,7 @@
 title: "Scambio eno-gastronomico con la pro-loco di Castel San Pietro Terme (BO)"
 date: 2020-02-09T23:53:42+01:00
 draft: false
-featured_image: '/blog/scambio-eno-gastronomico/scambioculturaleCastelSanPietro.jpg'
+featured_image: '/scambio-eno-gastronomico/scambioculturaleCastelSanPietro.jpg'
 summary: "Durante la giornata di ieri e di oggi abbiamo avuto la gradita visita di ..."
 tags: ["comunicazioni"]
 url: '/scambio-eno-gastronomico/'
