@@ -3,7 +3,7 @@ languageCode = 'it-it'
 title = 'Camper Club Torre Natisone'
 theme = "ananke"
 DefaultContentLanguage = "it"
-googleAnalytics = ""
+googleAnalytics = "UA-113453652-1"
 enableRobotsTXT = false
 
 [outputs]
@@ -72,13 +72,17 @@ home = ["HTML", "RSS", "JSON"]
     name = "Contatti"
     url = "/contatti/"
     weight = 7
-  
+
+[sitemap] 
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"  
 
 [params]
   author = "CCTN"
   favicon = "/images/favicon.ico"
   site_logo = "/images/loghino.png"
-  description = ""
+  description = "Siamo un gruppo di camperisti appassionati della vita “on the road! Organizziamo uscite nazionali ed internazionali, alla scoperta di luoghi, costumi e gastronomie locali, percorrendo strade sempre nuove ed interessanti!"
   date_format = "02/01/2006"
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
   # colore intestazioni vecchio sito #6666a4
