@@ -1,7 +1,7 @@
 ---
 title: "Zip Line a Bovec"
 date: 2019-07-05T19:05:33+01:00
-featured_image: '/i-nostri-viaggi/avventura/zip-line-a-bovec/RaftingBovec.jpg'
+featured_image: '/i-nostri-viaggi/zip-line-a-bovec/discesaZipLine.jpg'
 draft: false
 summary: ""
 tags: ["avventura"]
