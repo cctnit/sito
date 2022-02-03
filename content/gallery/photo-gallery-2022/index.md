@@ -13,3 +13,5 @@ album:
     alt: ""
 
 ---
+
+Ops! Per il momento nessun album.
