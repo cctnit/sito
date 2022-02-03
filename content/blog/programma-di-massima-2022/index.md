@@ -1,7 +1,7 @@
 ---
 title: "Programma di massima 2022"
 date: 2022-01-01T16:08:21+01:00
-draft: true
+draft: false
 featured_image: "/programma-di-massima-2022/Programma2022.jpg"
 summary: "Programma di massima per l'anno 2022 ..."
 tags: ["comunicazioni"]
