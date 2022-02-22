@@ -1,23 +1,8 @@
 <footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
-  <div class="white-70">Tags</div>
-  <div>{{ partial "site-footer-tags.html" . }}</div>
-  <div class="white-70 center">{{ .Site.Params.indirizzo_footer }} <a href="http://www.comune.buttrio.ud.it/"><img src="/images/stemma_buttrio.png" class="w100 mw4-ns v-mid" title="Comune di Buttrio" /></a> <a href="https://www.buri.it"><img src="/images/buri_piccola.png" class="w100 mw4-ns v-mid"  title="Pro Loco Buri" /></a></div>
-  <div class="ttu">{{ partial "site-navigation-footer.html" . }}</div>
-  <div ><a class="link f5 no-underline br-2 ph3 pv2 mb2 dib white-70 sans-serif" href="/privacy-policy">Privacy Policy</a>
-    <span class="white-70">Powered by:</span> 
-    <a class="link f5 no-underline br-2 ph3 pv2 mb2 dib white-70 sans-serif" href="https://github.com">
-      <img src="/images/github.jpg" class="w100 mw4-ns v-mid" />
-    </a>
-    <a class="link f5 no-underline br-2 ph3 pv2 mb2 dib white-70 sans-serif" href="https://gohugo.io/">
-      <img src="/images/hugo.jpg" class="w100 mw4-ns v-mid" />
-    </a>
-    <a class="link f5 no-underline br-2 ph3 pv2 mb2 dib white-70 sans-serif" href="/blog/index.xml" type="application/rss+xml">
-      {{ partial "svg/Feed-icon.svg" }}
-    </a>    
-  </div>
   <div class="flex justify-between">
-    <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
-      &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
-    </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
+    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+  </a>
+    <div>{{ partial "social-follow.html" . }}</div>
   </div>
 </footer>
