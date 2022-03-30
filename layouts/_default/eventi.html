@@ -24,7 +24,7 @@
               {{ else }}
                   <div class="relative w-100 mb4" data-dataevento="2999-12-31" data-evento="evento" ></div>
               {{ end }}
-              {{ partial "summary-with-image.html" . }}
+              {{ .Render "summary-with-image" }}
             </div>
           {{ end }}
 
