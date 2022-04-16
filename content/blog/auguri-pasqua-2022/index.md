@@ -1,6 +1,6 @@
 ---
 title: "Auguri Pasqua 2022"
-date: 2022-04-16T15:45:24+01:00
+date: 2022-04-15T15:45:24+01:00
 draft: false
 featured_image: "/auguri-pasqua-2022/AuguriPasqua2022.jpg"
 tags: ["comunicazioni"]

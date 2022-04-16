@@ -11,7 +11,7 @@ draft: false
 # per andare a capo inserire due spazi a fine riga
 # per abilitare/disabilitare il messaggio enable: true / false
 messaggio:
-  enable: true
+  enable: false
 ---
 
 *Carissimi tutti!*
