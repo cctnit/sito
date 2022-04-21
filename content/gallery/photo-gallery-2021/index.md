@@ -3,6 +3,7 @@ title: "Photo Gallery 2021"
 date: 2021-01-01T22:55:41+01:00
 draft: false
 layout: "galleria"
+featured_image: '/images/Home.jpg'
 
 album:
   enable: true

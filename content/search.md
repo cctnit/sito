@@ -4,5 +4,6 @@ date: 2022-01-15T00:54:51+01:00
 draft: false
 type: "cerca"
 layout: "search"
+featured_image: '/images/Home.jpg'
 ---
 

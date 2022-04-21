@@ -3,6 +3,8 @@ title: "Contatti"
 date: 2021-12-13T22:55:59+01:00
 draft: false
 layout: "contatti"
+featured_image: '/images/Home.jpg'
+
 
 contatti:
   enable: true
