@@ -14,18 +14,18 @@
           <!-- WEBP -->
       
           <source type="image/webp" media="(max-width: 500px)"
-              srcset=" {{ ($src.Resize "498x webp" ).RelPermalink }} ">
+              srcset=" {{ ($src.Resize "498x281 webp" ).RelPermalink }} ">
       
           <source type="image/webp" media="(min-width: 501px)"
-              srcset=" {{ ($src.Resize (printf "%dx webp" .Width)).RelPermalink }} ">
+              srcset=" {{ ($src.Resize (printf "%dx%d webp" .Width .Height)).RelPermalink }} ">
       
           <!-- JPG -->
       
           <source type="image/jpeg"  media="(max-width: 500px)"
-              srcset=" {{ ($src.Resize "500x" ).RelPermalink }} ">
+              srcset=" {{ ($src.Resize "498x281" ).RelPermalink }} ">
       
           <source type="image/jpeg"  media="(min-width: 501px)"
-              srcset=" {{ ($src.Resize (printf "%dx" .Width)).RelPermalink }} ">
+              srcset=" {{ ($src.Resize (printf "%dx%d" .Width .Height)).RelPermalink }} ">
         
           <img class="pageheader" src=" {{ $src.RelPermalink }} "  />
         </picture>

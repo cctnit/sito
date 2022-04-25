@@ -16,20 +16,20 @@
                 <!-- WEBP -->
             
                 <source type="image/webp" media="(max-width: 500px)"
-                    srcset=" {{ ($src.Resize "384x webp" ).RelPermalink }} ">
+                    srcset=" {{ ($src.Resize "384x266 webp" ).RelPermalink }} ">
             
                 <source type="image/webp" media="(min-width: 501px)"
-                    srcset=" {{ ($src.Resize "384x webp" ).RelPermalink }} ">
+                    srcset=" {{ ($src.Resize "384x266 webp" ).RelPermalink }} ">
             
                 <!-- JPG -->
             
                 <source type="image/jpeg"  media="(max-width: 500px)"
-                    srcset=" {{ ($src.Resize "384x" ).RelPermalink }} ">
+                    srcset=" {{ ($src.Resize "384x266" ).RelPermalink }} ">
             
                 <source type="image/jpeg"  media="(min-width: 501px)"
-                    srcset=" {{ ($src.Resize "384x" ).RelPermalink }} ">
+                    srcset=" {{ ($src.Resize "384x266" ).RelPermalink }} ">
               
-                <img class="img" src=" {{ $src.RelPermalink }} " alt="immagine da {{ .Title }}" />
+                <img class="img" src=" {{ $src.RelPermalink }} " alt="immagine da {{ .Title }}" width="384" height="266" />
               </picture>
             {{ end }}
 

@@ -47,7 +47,7 @@ La maggior parte dei browser permette di cancellare i cookie dal disco fisso del
 
 [Mozilla Firefox](https://support.mozilla.org/it/kb/Attivare%20e%20disattivare%20i%20cookie)
 
-[Internet Explorer](http://support.microsoft.com/kb/196955)
+[Microsoft Edge](https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09)
 
 [Safari](http://support.apple.com/kb/PH5042)
 
