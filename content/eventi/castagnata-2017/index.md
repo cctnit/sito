@@ -3,7 +3,7 @@ title: "Castagnata 2017"
 date: 2017-11-14T20:56:09+01:00
 draft: false
 
-featured_image: "/eventi/castagnata-2017/Castagne.jpg"
+featured_image: "Castagne.jpg"
 summary: "Saremo a Martignacco a mangiare le Castagne ..."
 tags: ["eventi"]
 

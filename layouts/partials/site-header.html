@@ -2,8 +2,36 @@
 {{ if $featured_image }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
   {{ $featured_image := (trim $featured_image "/") | absURL }}
-  <header class="cover bg-center" style="background-image: url('{{ $featured_image }}');">
+
+  <header class="cover bg-center pageheader">
+    
     <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-60" }}">
+
+      {{ with resources.GetMatch ( printf "%s" .Params.featured_image) }}
+        {{$src := .}}
+
+        <picture class="pageheader">
+          <!-- WEBP -->
+      
+          <source type="image/webp" media="(max-width: 500px)"
+              srcset=" {{ ($src.Resize "498x webp" ).RelPermalink }} ">
+      
+          <source type="image/webp" media="(min-width: 501px)"
+              srcset=" {{ ($src.Resize (printf "%dx webp" .Width)).RelPermalink }} ">
+      
+          <!-- JPG -->
+      
+          <source type="image/jpeg"  media="(max-width: 500px)"
+              srcset=" {{ ($src.Resize "500x" ).RelPermalink }} ">
+      
+          <source type="image/jpeg"  media="(min-width: 501px)"
+              srcset=" {{ ($src.Resize (printf "%dx" .Width)).RelPermalink }} ">
+        
+          <img class="pageheader" src=" {{ $src.RelPermalink }} "  />
+        </picture>
+
+      {{ end }}
+
       {{ partial "site-navigation.html" .}}
       <div class="tc-l pv4 pv6-l ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">

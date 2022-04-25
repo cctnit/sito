@@ -5,9 +5,34 @@
       {{ if $featured_image }}
           {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
         {{ $featured_image := (trim $featured_image "/") | absURL }}
+
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
           <a href="{{.RelPermalink}}" class="db grow">
-            <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
+
+            {{ with resources.Get ( printf "%s" .Params.featured_image | printf "%s%s" "images/" | printf "%s" ) }}
+              {{$src := .}}
+      
+              <picture class="img">
+                <!-- WEBP -->
+            
+                <source type="image/webp" media="(max-width: 500px)"
+                    srcset=" {{ ($src.Resize "384x webp" ).RelPermalink }} ">
+            
+                <source type="image/webp" media="(min-width: 501px)"
+                    srcset=" {{ ($src.Resize "384x webp" ).RelPermalink }} ">
+            
+                <!-- JPG -->
+            
+                <source type="image/jpeg"  media="(max-width: 500px)"
+                    srcset=" {{ ($src.Resize "384x" ).RelPermalink }} ">
+            
+                <source type="image/jpeg"  media="(min-width: 501px)"
+                    srcset=" {{ ($src.Resize "384x" ).RelPermalink }} ">
+              
+                <img class="img" src=" {{ $src.RelPermalink }} " alt="immagine da {{ .Title }}" />
+              </picture>
+            {{ end }}
+
           </a>
         </div>
       {{ end }}

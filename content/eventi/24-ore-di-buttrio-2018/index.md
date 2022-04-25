@@ -3,7 +3,7 @@ title: "24 Ore Di Buttrio 2018"
 date: 2018-05-26T20:51:52+01:00
 draft: false
 
-featured_image: "/eventi/24-ore-di-buttrio-2018/24oreButtrio_13.jpg"
+featured_image: "24oreButtrio_13.jpg"
 summary: "Il CAMPER CLUB TORRE – NATISONE parteciperà con un proprio gruppo ..."
 tags: ["eventi"]
 

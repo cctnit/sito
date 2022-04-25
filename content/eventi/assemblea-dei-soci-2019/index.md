@@ -3,7 +3,7 @@ title: "Assemblea dei Soci 2019"
 date: 2019-02-24T20:44:08+01:00
 draft: false
 
-featured_image: "/eventi/assemblea-dei-soci-2019/AssembleaSoci.jpg"
+featured_image: "AssembleaSoci.jpg"
 summary: "In occasione della seconda Assemblea Ordinaria dei soci ..."
 tags: ["eventi"]
 

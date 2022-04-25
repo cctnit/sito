@@ -5,7 +5,7 @@ description: ""
 draft: false
 summary: ''
 layout: "eventi"
-featured_image: '/images/Home.jpg'
+featured_image: 'images/Home.jpg'
 
 ---
 

@@ -3,7 +3,7 @@ title: "Il Carnevale di Fano"
 date: 2017-12-24T20:54:42+01:00
 draft: false
 
-featured_image: "/eventi/il-carnevale-di-fano/CarnevaleDiFano.jpg"
+featured_image: "CarnevaleDiFano.jpg"
 summary: "Al Carnevale di Fano ..."
 tags: ["eventi", "uscite nazionali"]
 

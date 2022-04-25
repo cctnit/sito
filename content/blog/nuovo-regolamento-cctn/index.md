@@ -5,6 +5,7 @@ draft: false
 summary: "Siamo in prossimità del nostro secondo compleanno ed il tesseramento ..."
 tags: ["comunicazioni"]
 url: '/nuovo-regolamento-cctn/'
+featured_image: ""
 ---
 
 Siamo in prossimità del nostro secondo compleanno ed il tesseramento di tanti nuovi soci ci ha lasciato positivamente stupiti!

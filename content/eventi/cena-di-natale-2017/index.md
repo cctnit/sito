@@ -3,7 +3,7 @@ title: "Cena Di Natale 2017"
 date: 2017-11-26T20:55:24+01:00
 draft: false
 
-featured_image: "/eventi/cena-di-natale-2017/CenaNatale2017.jpg"
+featured_image: "CenaNatale2017.jpg"
 summary: "Sabato 16 dicembre ci troveremo all'Agriturismo ..."
 tags: ["eventi"]
 

@@ -3,7 +3,7 @@ title: "Dall'osservatorio Astrofisico di Asiago vi faremo vedere le stelle"
 date: 2018-03-27T20:53:26+01:00
 draft: false
 
-featured_image: "/eventi/dallosservatorio-astrofisico-di-asiago-vi-faremo-vedere-le-stelle/OsservatorioAsiago.jpg"
+featured_image: "OsservatorioAsiago.jpg"
 summary: "Visita a Cittadella, all'Osservatorio di Asiago e ..."
 tags: ["eventi", "uscite nazionali"]
 

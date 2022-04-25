@@ -3,7 +3,7 @@ title: "Inaugurazione della nuova Area Attrezzata per Camper di Buttrio e della 
 date: 2018-04-15T20:53:01+01:00
 draft: false
 
-featured_image: "/eventi/inaugurazione-della-nuova-area-attrezzata-per-camper-di-buttrio-e-della-sede-del-camper-club/InaugurazioneAreaAttrezzataButtrio.jpg"
+featured_image: "InaugurazioneAreaAttrezzataButtrio.jpg"
 summary: "Sabato 05 maggio dalle ore 15.00 : ritrovo presso la nuova area di sosta/camper ..."
 tags: ["eventi"]
 

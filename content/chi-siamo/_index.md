@@ -2,7 +2,7 @@
 title: "Chi Siamo"
 description: ""
 date: 2021-12-11T22:40:07+01:00
-featured_image: "/chi-siamo/ChiSiamo.jpg"
+featured_image: "images/ChiSiamo.jpg"
 draft: false
 ---
 

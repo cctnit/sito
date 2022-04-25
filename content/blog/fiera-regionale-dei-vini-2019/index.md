@@ -2,7 +2,7 @@
 title: "Fiera Regionale Dei Vini 2019"
 date: 2019-06-10T16:28:53+01:00
 draft: false
-featured_image: "/fiera-regionale-dei-vini-2019/BicchiereBuri.jpg"
+featured_image: "BicchieriBuri.jpg"
 summary: "La piccola città di **Buttrio** ha ospitato l'**87esima Fiera Regionale dei Vini**, la più antica in Italia ..."
 tags: ["comunicazioni"]
 url: '/fiera-regionale-dei-vini-2019/'

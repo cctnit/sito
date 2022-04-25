@@ -3,7 +3,7 @@ title: "Capodanno in Puglia"
 date: 2018-12-02T20:44:59+01:00
 draft: false
 
-featured_image: "/eventi/capodanno-in-puglia/Capodanno.jpg"
+featured_image: "Capodanno.jpg"
 summary: "Quest'anno le Feste di Natale e il Capodanno ..."
 tags: ["eventi", "uscite nazionali"]
 

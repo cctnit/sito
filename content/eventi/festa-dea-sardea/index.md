@@ -3,7 +3,7 @@ title: "Festa Dea Sardea"
 date: 2017-06-19T20:59:55+01:00
 draft: false
 
-featured_image: "/eventi/festa-dea-sardea/FestaSardeaSile.jpg"
+featured_image: "FestaSardeaSile.jpg"
 summary: "A Silea per la Festa dea Sardea e la discesa lungo la Restera ..."
 tags: ["eventi", "uscite nazionali"]
 

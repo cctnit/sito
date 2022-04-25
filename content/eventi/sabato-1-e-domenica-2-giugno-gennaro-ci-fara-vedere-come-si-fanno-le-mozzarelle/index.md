@@ -3,7 +3,7 @@ title: "Sabato 1 e Domenica 2 Giugno Gennaro ci farà vedere come si fanno le mo
 date: 2019-05-18T20:42:59+01:00
 draft: false
 
-featured_image: "/eventi/sabato-1-e-domenica-2-giugno-gennaro-ci-fara-vedere-come-si-fanno-le-mozzarelle/Mozzarella.jpg"
+featured_image: "Mozzarella.jpg"
 summary: "Andremo a vedere come si fa la ..."
 tags: ["eventi", "uscite nazionali"]
 

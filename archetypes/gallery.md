@@ -3,6 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
 layout: "galleria"
+featured_image: "images/Home.jpg"
 
 # per ogni album che verrà visualizzato nella pagina
 # copiare la struttura album: 

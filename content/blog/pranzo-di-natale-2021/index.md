@@ -4,7 +4,7 @@ date: 2021-12-13T22:13:19+01:00
 draft: false
 tags: ["comunicazioni"]
 summary: "Programma del Pranzo di Natale 2021"
-featured_image: '/pranzo-di-natale-2021/pranzo-e-cena-di-natale.jpg'
+featured_image: 'pranzo-e-cena-di-natale.jpg'
 url: '/pranzo-di-natale-2021/'
 ---
 

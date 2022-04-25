@@ -3,7 +3,7 @@ title: "I Mercatini di Natale di Graz (Austria)"
 date: 2019-10-23T19:21:41+01:00
 draft: false
 
-featured_image: "/eventi/i-mercatini-di-natale-di-graz-austria/MercatiniNataleGraz.jpg"
+featured_image: "MercatiniNataleGraz.jpg"
 summary: "A Graz per i mercatini di Natale"
 tags: ["eventi", "uscite internazionali"]
 

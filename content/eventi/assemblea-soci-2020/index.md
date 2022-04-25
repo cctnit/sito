@@ -3,7 +3,7 @@ title: "Assemblea Soci 2020"
 date: 2020-06-10T18:28:55+01:00
 draft: false
 summary: "Assemblea Soci 2020"
-featured_image: "/eventi/assemblea-soci-2020/AssembleaSoci.jpg"
+featured_image: "AssembleaSoci.jpg"
 tags: ["eventi"]
 
 # <div class="h-event">

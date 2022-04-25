@@ -3,7 +3,7 @@ title: "52a Fiera del Riso - Isola Della Scala (Verona)"
 date: 2018-02-09T20:49:22+01:00
 draft: false
 
-featured_image: "/eventi/52a-fiera-del-riso-isola-della-scala-vr/FieraDelRiso.jpg"
+featured_image: "FieraDelRiso.jpg"
 summary: "La Fiera del Riso è, da oltre mezzo secolo ..."
 tags: ["eventi", "uscite nazionali"]
 

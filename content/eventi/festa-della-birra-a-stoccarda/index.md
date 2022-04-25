@@ -3,7 +3,7 @@ title: "Festa della birra a Stoccarda"
 date: 2019-08-03T20:41:33+01:00
 draft: false
 
-featured_image: "/eventi/festa-della-birra-a-stoccarda/CastelloStoccarda.jpg"
+featured_image: "CastelloStoccarda.jpg"
 summary: "Da sabato 05 a venerdì 11 ottobre saremo a Stoccarda alla Festa della Birra ..."
 tags: ["eventi", "uscite internazionali"]
 

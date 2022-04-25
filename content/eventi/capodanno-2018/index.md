@@ -3,7 +3,7 @@ title: "Capodanno 2018"
 date: 2017-12-14T20:55:03+01:00
 draft: false
 
-featured_image: "/eventi/capodanno-2018/StradaDelleFiabe.jpg"
+featured_image: "StradaDelleFiabe.jpg"
 summary: "Per il periodo delle vacanze natalizie proponiamo ..."
 tags: ["eventi", "uscite internazionali"]
 

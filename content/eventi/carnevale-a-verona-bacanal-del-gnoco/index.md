@@ -2,7 +2,7 @@
 title: "Carnevale a Verona - Bacanal del gnoco"
 date: 2019-02-24T15:18:49+01:00
 draft: false
-featured_image: "/eventi/carnevale-a-verona-bacanal-del-gnoco/carnevale.jpg"
+featured_image: "carnevale.jpg"
 summary: "Per Carnevale parteciperemo al tradizionale Bacanal del gnoco a Verona"
 tags: ["eventi", "uscite nazionali"]
 

@@ -3,7 +3,7 @@ title: "Modena - Città Estense"
 date: 2018-02-04T20:54:06+01:00
 draft: false
 
-featured_image: "/eventi/modena-citta-estense/Modena.jpg"
+featured_image: "Modena.jpg"
 summary: "Modena, è una città famosa nel mondo non solo per la Ferrari ..."
 tags: ["eventi", "uscite nazionali"]
 

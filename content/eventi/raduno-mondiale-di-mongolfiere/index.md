@@ -3,7 +3,7 @@ title: "Raduno mondiale di mongolfiere"
 date: 2017-06-16T20:59:35+01:00
 draft: false
 
-featured_image: "/eventi/raduno-mondiale-di-mongolfiere/RadunoMongolfiere.jpg"
+featured_image: "RadunoMongolfiere.jpg"
 summary: "Visita dell'Alsazia e del raduno mondiale delle Mongolfiere a Chambley ..."
 tags: ["eventi", "uscite internazionali"]
 

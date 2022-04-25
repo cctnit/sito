@@ -3,7 +3,7 @@ title: "Assemblea Soci 2021"
 date: 2021-09-01T18:03:42+01:00
 draft: false
 
-featured_image: "/eventi/assemblea-soci-2021/AssembleaSoci.jpg"
+featured_image: "AssembleaSoci.jpg"
 summary: "Considerato la persistente situazione attuale, per cui a causa della pandemia ..."
 tags: ["eventi"]
 

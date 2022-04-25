@@ -3,7 +3,7 @@ title: "La Torre campanaria di Castel San Pietro Terme e i Fuochi di Taranis"
 date: 2018-06-12T20:51:29+01:00
 draft: false
 
-featured_image: "/eventi/la-torre-campanaria-di-castel-s-pietro-terme-e-i-fuochi-di-taranis/FuochiTaranis.jpg"
+featured_image: "FuochiTaranis.jpg"
 summary: "In via del tutto eccezionale il Comune di San Pietro Terme ha organizzato ..."
 tags: ["eventi", "uscite nazionali"]
 

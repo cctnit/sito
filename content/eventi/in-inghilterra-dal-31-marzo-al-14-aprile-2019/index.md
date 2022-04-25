@@ -3,7 +3,7 @@ title: "In Inghilterra dal 31 marzo al 14 aprile 2019"
 date: 2019-03-05T20:43:48+01:00
 draft: false
 
-featured_image: "/eventi/in-inghilterra-dal-31-marzo-al-14-aprile-2019/Inghilterra.jpg"
+featured_image: "Inghilterra.jpg"
 summary: "Come già anticipato nel nostro calendario stiamo organizzando"
 tags: ["eventi", "uscite internazionali"]
 

@@ -3,6 +3,7 @@ title: "Toniutti Nello"
 date: 2021-12-26T15:10:34+01:00
 draft: false
 url: '/toniutti-nello/'
+featured_image: ""
 ---
 
 

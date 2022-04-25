@@ -2,7 +2,7 @@
 title: "Iscriviti Al Club"
 date: 2021-12-25T16:42:43+01:00
 draft: false
-featured_image: '/images/Home.jpg'
+featured_image: 'images/Home.jpg'
 
 ---
 

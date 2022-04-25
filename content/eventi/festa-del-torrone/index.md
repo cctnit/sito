@@ -3,7 +3,7 @@ title: "Festa del Torrone"
 date: 2017-11-13T20:56:31+01:00
 draft: false
 
-featured_image: "/eventi/festa-del-torrone/FestaTorrone2017.jpg"
+featured_image: "FestaTorrone2017.jpg"
 summary: "La Festa del Torrone di Cremona offre ..."
 tags: ["eventi", "uscite nazionali"]
 

@@ -3,7 +3,7 @@ title: "Il Palio degli Ochi"
 date: 2018-05-16T20:52:12+01:00
 draft: false
 
-featured_image: "/eventi/il-palio-degli-ochi/PalioOchi.jpg"
+featured_image: "PalioOchi.jpg"
 summary: "Taverne, mercati, antichi mestieri e spettacoli a corte, ..."
 tags: ["eventi", "uscite nazionali"]
 

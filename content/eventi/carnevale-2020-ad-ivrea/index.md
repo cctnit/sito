@@ -3,7 +3,7 @@ title: "Carnevale 2020 ad Ivrea"
 date: 2020-01-28T13:18:54+01:00
 draft: false
 
-featured_image: "/eventi/carnevale-2020-ad-ivrea/CarnevaleIvrea.jpg"
+featured_image: "CarnevaleIvrea.jpg"
 summary: "Uscita per il Carnevale di Ivrea - Battaglia delle arance"
 tags: ["eventi", "uscite nazionali"]
 

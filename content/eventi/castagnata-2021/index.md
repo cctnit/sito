@@ -3,7 +3,7 @@ title: "Castagnata 2021"
 date: 2021-11-01T18:28:55+01:00
 draft: false
 summary: "Programma della Castagnata 2021"
-featured_image: "/eventi/castagnata-2021/Castagne.jpg"
+featured_image: "Castagne.jpg"
 tags: ["eventi"]
 
 # <div class="h-event">

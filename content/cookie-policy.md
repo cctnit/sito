@@ -2,7 +2,7 @@
 title: "Cookie Policy"
 description: "Pagina della Policy sui Cookies"
 draft: false
-featured_image: '/images/Home.jpg'
+featured_image: 'images/Home.jpg'
 
 ---
 

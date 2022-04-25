@@ -3,7 +3,7 @@ title: "Castagnata 2019"
 date: 2019-11-11T20:41:01+01:00
 draft: false
 
-featured_image: "/eventi/castagnata-2019/Castagne.jpg"
+featured_image: "Castagne.jpg"
 summary: "Domenica 17 novembre saremo a Buttrio a mangiare le castagne!"
 tags: ["eventi"]
 

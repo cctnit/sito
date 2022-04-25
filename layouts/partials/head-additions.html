@@ -1,2 +1,22 @@
 {{ template "_internal/google_analytics.html" . }}
 {{ template "_internal/google_analytics_async.html" . }}
+
+
+<style>
+
+header.pageheader {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+img.pageheader, picture.pageheader {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+</style>

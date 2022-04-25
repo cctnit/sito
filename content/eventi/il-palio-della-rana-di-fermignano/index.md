@@ -3,7 +3,7 @@ title: "Il Palio della Rana di Fermignano"
 date: 2018-03-08T20:53:48+01:00
 draft: false
 
-featured_image: "/eventi/il-palio-della-rana-di-fermignano/PalioDellaRana.jpg"
+featured_image: "PalioDellaRana.jpg"
 summary: "Il 28 settembre 1607, Francesco Maria II Della Rovere, ultimo Duca di ..."
 tags: ["eventi", "uscite nazionali"]
 

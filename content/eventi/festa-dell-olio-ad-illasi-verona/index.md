@@ -3,7 +3,7 @@ title: "Festa dell'olio ad Illasi (Verona)"
 date: 2017-10-06T20:57:06+01:00
 draft: false
 
-featured_image: "/eventi/festa-dell-olio-ad-illasi-verona/Illasi.jpg"
+featured_image: "Illasi.jpg"
 summary: "Alla Festa dell'Olio ad Illasi con degustazioni ..."
 tags: ["eventi", "uscite nazionali"]
 

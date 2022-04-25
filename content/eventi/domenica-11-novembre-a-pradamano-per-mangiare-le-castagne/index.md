@@ -3,7 +3,7 @@ title: "Domenica 11 Novembre a Pradamano per mangiare le castagne"
 date: 2018-10-10T20:48:38+01:00
 draft: false
 
-featured_image: "/eventi/domenica-11-novembre-a-pradamano-per-mangiare-le-castagne/Castagne.jpg"
+featured_image: "Castagne.jpg"
 summary: "Anche quest'anno il CCTN organizza la tradizionale  ..."
 tags: ["eventi"]
 

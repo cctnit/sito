@@ -2,7 +2,7 @@
 title: "Olanda, fioritura dei tulipani ... e non solo"
 date: 2022-04-16T10:00:01+01:00
 draft: false
-featured_image: '/eventi/olanda-fioritura-dei-tulipani/OlandaFiorituraTulipani.jpg'
+featured_image: 'OlandaFiorituraTulipani.jpg'
 summary: "Programma uscita in Olanda per la fioritura dei tulipani"
 tags: ["eventi", "uscite internazionali"]
 

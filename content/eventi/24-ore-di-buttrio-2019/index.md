@@ -3,7 +3,7 @@ title: "24 Ore di Buttrio 2019"
 date: 2019-05-31T20:41:59+01:00
 draft: false
 
-featured_image: "/eventi/24-ore-di-buttrio-2019/24x1OraButtrio.jpg"
+featured_image: "24x1OraButtrio.jpg"
 summary: "Come l'anno passato il nostro obiettivo è di formare un gruppo di 24 partecipanti ..."
 tags: ["eventi"]
 

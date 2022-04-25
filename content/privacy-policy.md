@@ -2,7 +2,7 @@
 title: "Privacy Policy"
 description: "Pagina della Privacy"
 draft: false
-featured_image: '/images/Home.jpg'
+featured_image: 'images/Home.jpg'
 
 ---
 

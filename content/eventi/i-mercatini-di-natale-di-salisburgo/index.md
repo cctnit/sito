@@ -3,7 +3,7 @@ title: "I mercatini di Natale di Salisburgo"
 date: 2018-11-23T19:21:41+01:00
 draft: false
 
-featured_image: "/eventi/i-mercatini-di-natale-di-salisburgo/MercatiniNataleSalisburgo.webp"
+featured_image: "MercatiniNataleSalisburgo.webp"
 summary: "A Salisburgo per i Mercatini di Natale ..."
 tags: ["eventi", "uscite internazionali"]
 

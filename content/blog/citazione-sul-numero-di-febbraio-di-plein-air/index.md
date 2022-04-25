@@ -2,7 +2,7 @@
 title: "Citazione sul numero di Febbraio di Plein Air"
 date: 2020-02-02T23:52:52+01:00
 draft: false
-featured_image: "/citazione-sul-numero-di-febbraio-di-plein-air/Plein-Air-febbraio-2020.jpg"
+featured_image: "Plein-Air-febbraio-2020.jpg"
 summary: "Piccola citazione nel numero di Febbraio 2020 di Plein Air ..."
 tags: ["comunicazioni"]
 url: '/citazione-sul-numero-di-febbraio-di-plein-air/'

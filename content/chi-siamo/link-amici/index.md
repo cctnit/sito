@@ -4,7 +4,7 @@ date: 2021-12-11T23:01:36+01:00
 featured_image: ''
 draft: false
 layout: "amici"
-featured_image: '/images/Home.jpg'
+featured_image: 'images/Home.jpg'
 
 
 amici:

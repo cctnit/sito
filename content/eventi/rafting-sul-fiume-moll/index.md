@@ -3,7 +3,7 @@ title: "Rafting sul fiume Moll"
 date: 2018-06-30T20:50:42+01:00
 draft: false
 
-featured_image: "/eventi/rafting-sul-fiume-moll/RaftingMoll.jpg"
+featured_image: "RaftingMoll.jpg"
 summary: "Faremo rafting sul fiume Moll. La discesa ..."
 tags: ["eventi", "uscite internazionali"]
 

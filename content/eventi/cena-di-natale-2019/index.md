@@ -3,7 +3,7 @@ title: "Cena Di Natale 2019"
 date: 2019-11-19T19:09:41+01:00
 draft: false
 
-featured_image: "/eventi/cena-di-natale-2019/pranzo-e-cena-di-natale.jpg"
+featured_image: "pranzo-e-cena-di-natale.jpg"
 summary: "Cena di Natale"
 
 # <div class="h-event">

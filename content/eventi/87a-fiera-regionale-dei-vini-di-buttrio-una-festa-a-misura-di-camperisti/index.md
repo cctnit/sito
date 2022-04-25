@@ -3,7 +3,7 @@ title: "87a Fiera Regionale dei Vini di Buttrio - Una Festa a misura di camperis
 date: 2019-05-30T20:42:29+01:00
 draft: false
 
-featured_image: "/eventi/87a-fiera-regionale-dei-vini-di-buttrio-una-festa-a-misura-di-camperisti/FieraViniButtrio.jpg"
+featured_image: "FieraViniButtrio.jpg"
 summary: "La Fiera Regionale dei Vini di Buttrio si apre al turismo en plein air ..."
 tags: ["eventi"]
 

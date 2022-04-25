@@ -1,7 +1,7 @@
 ---
 title: "Rafting sul Fiume color smeraldo"
 date: 2019-07-05T19:04:57+01:00
-featured_image: '/i-nostri-viaggi/rafting-sul-fiume-isonzo/RaftingBovec.jpg'
+featured_image: 'RaftingBovec.jpg'
 draft: false
 summary: ""
 

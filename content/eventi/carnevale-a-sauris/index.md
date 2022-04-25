@@ -3,7 +3,7 @@ title: "Carnevale a Sauris"
 date: 2018-01-12T20:54:23+01:00
 draft: false
 
-featured_image: "/eventi/carnevale-a-sauris/CarnevaleSauris.jpg"
+featured_image: "CarnevaleSauris.jpg"
 summary: "Il Carnevale di Sauris ha sicuramente origini antiche e ..."
 tags: ["eventi", "uscite nazionali"]
 

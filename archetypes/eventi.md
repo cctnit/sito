@@ -2,8 +2,9 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-
-featured_image: "/eventi/{{ replace .Name "-" "-" | title | lower }}/"
+# ricordarsi di inserire la featured_image (di solito jpg 1500 x)
+# sia sotto l'articolo che in assets\images
+featured_image: ""
 summary: ""
 tags: ["eventi"]
 
