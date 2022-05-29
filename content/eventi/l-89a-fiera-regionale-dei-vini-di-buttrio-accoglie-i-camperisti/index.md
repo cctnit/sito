@@ -24,7 +24,7 @@ evento:
 
 L'89a Fiera Regionale dei Vini di Buttrio tornerà – dopo le due ultime edizioni svoltesi ugualmente ma comunque costrette a una versione ridotta dalla situazione sanitaria – in edizione completa dal 10 al 12 giugno 2022 nella magnifica Villa di Toppo – Florio e nel suo parco storico.
 
-Molte le attrattive di quest'anno: un focus sull'agricoltura biologica e sulla sostenibilità, show cooking, musica, cinema ambulante nei vigneti, cicloturistica tra Colli Orientali e Collio, un raduno di auto storiche ed eventi per ogni età. Il "*pezzo forte*" della storica manifestazione saranno i migliori vini autoctoni del Friuli Venezia Giulia e d'Italia, che si potranno assaggiare sia nella fornita enoteca della Fiera che nei laboratori curati insieme alla Guida ai Vini Buoni d'Italia del Touring Club, curata da *Mario Busso*.
+Molte le attrattive di quest'anno: un focus sull'agricoltura biologica e sulla sostenibilità, show cooking, musica, cinema ambulante nei vigneti, cicloturistica tra Colli Orientali e Collio, un raduno di auto storiche ed eventi per ogni età. Il "*pezzo forte*" della storica manifestazione saranno i migliori vini autoctoni del Friuli Venezia Giulia e d'Italia, che si potranno assaggiare sia nella fornita enoteca della Fiera che nei laboratori curati, insieme alla Guida ai Vini Buoni d'Italia edita dal Touring Club, da *Mario Busso*.
 
 Maggiori informazioni sul [sito internet della ProLoco di Buttrio](http://www.buri.it/).
 
