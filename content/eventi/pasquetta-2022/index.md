@@ -2,6 +2,7 @@
 title: "Pasquetta 2022"
 date: 2022-04-15T22:55:01+01:00
 draft: false
+omit_header_text: true
 featured_image: 'pasquetta.jpg'
 summary: "Programma Pasquetta 2022"
 tags: ["eventi"]

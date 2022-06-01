@@ -2,6 +2,7 @@
 title: "L'89a Fiera Regionale dei Vini di Buttrio accoglie i camperisti"
 date: 2022-05-29T11:43:10+02:00
 draft: false
+omit_header_text: true
 # ricordarsi di inserire la featured_image (di solito jpg 1500 x)
 # sia sotto l'articolo che in assets\images
 featured_image: "FieraDeiVini2022.jpg"

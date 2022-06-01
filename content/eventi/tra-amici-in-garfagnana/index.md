@@ -2,7 +2,7 @@
 title: "Tra Amici in Garfagnana"
 date: 2018-06-12T20:51:08+01:00
 draft: false
-
+omit_header_text: true
 featured_image: "Lucca.jpg"
 summary: "Un bel giro in Garfagnana ..."
 tags: ["eventi", "uscite nazionali"]

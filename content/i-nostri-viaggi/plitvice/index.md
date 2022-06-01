@@ -2,6 +2,7 @@
 title: "Plitvice"
 date: 2019-04-19T19:06:43+01:00
 draft: false
+omit_header_text: true
 tags: ["natura"]
 featured_image: 'images/Home.jpg'
 ---

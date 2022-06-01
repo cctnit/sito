@@ -2,6 +2,7 @@
 title: "Convocazione Assemblea Soci 2020"
 date: 2020-06-09T00:07:27+01:00
 draft: false
+omit_header_text: true
 featured_image: 'assembleaSoci.jpg'
 summary: "Le disposizioni governative emanate a causa della pandemia denominata “Covid19” vietano l’assembramento di più persone ..."
 tags: ["comunicazioni"]

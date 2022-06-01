@@ -2,6 +2,7 @@
 title: "89a Fiera Regionale dei Vini di Buttrio"
 date: 2022-05-29T12:17:14+02:00
 draft: false
+omit_header_text: true
 summary: "Torna la Fiera Regionale dei Vini di Buttrio dal 10 al 12 giugno 2022 nella magnifica Villa di Toppo – Florio e nel suo parco storico ..."
 tags: ["comunicazioni"]
 url: "/89a-fiera-regionale-dei-vini-di-buttrio/"

@@ -2,6 +2,7 @@
 title: "Nuovo Regolamento Cctn"
 date: 2019-05-31T11:18:42+01:00
 draft: false
+omit_header_text: true
 summary: "Siamo in prossimità del nostro secondo compleanno ed il tesseramento ..."
 tags: ["comunicazioni"]
 url: '/nuovo-regolamento-cctn/'

@@ -2,6 +2,7 @@
 title: "Pasqua 2021"
 date: 2021-04-02T14:52:28+01:00
 draft: false
+omit_header_text: true
 featured_image: "Auguri-Pasqua-2021.jpg"
 tags: ["comunicazioni"]
 url: '/pasqua-2021/'

@@ -2,7 +2,7 @@
 title: "Riviera Fiorita Rievocazione Storica"
 date: 2017-09-01T20:57:57+01:00
 draft: false
-
+omit_header_text: true
 featured_image: "RivieraFiorita06.jpg"
 summary: "Parteciperemo alla rievocazione storica sul Breanta ..."
 tags: ["eventi", "uscite nazionali"]

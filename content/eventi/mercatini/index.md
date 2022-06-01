@@ -2,7 +2,7 @@
 title: "Mercatini a Laterina in Valdarno"
 date: 2017-11-26T20:55:43+01:00
 draft: false
-
+omit_header_text: true
 featured_image: "MercatiniLaterina.jpg"
 summary: "Visita ai mercatini di Natale e ai tradizionali ..."
 tags: ["eventi", "uscite nazionali"]

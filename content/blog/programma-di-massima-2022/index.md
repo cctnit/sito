@@ -2,6 +2,7 @@
 title: "Programma di massima 2022"
 date: 2022-01-01T16:08:21+01:00
 draft: false
+omit_header_text: true
 featured_image: "Programma2022.jpg"
 summary: "Programma di massima per l'anno 2022 ..."
 tags: ["comunicazioni"]

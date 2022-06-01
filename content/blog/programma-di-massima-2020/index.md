@@ -2,6 +2,7 @@
 title: "Programma di massima 2020"
 date: 2020-01-28T16:08:21+01:00
 draft: false
+omit_header_text: true
 featured_image: "Programma2020.jpg"
 summary: "Programma di massima per l'anno 2020 ..."
 tags: ["comunicazioni"]

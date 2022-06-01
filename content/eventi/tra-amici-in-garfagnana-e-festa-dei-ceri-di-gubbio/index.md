@@ -2,7 +2,7 @@
 title: "Tra Amici in Garfagnana e Festa dei Ceri di Gubbio"
 date: 2019-03-05T20:43:24+01:00
 draft: false
-
+omit_header_text: true
 featured_image: "FestaDeiCeriGubbio.jpg"
 summary: ""
 tags: ["eventi", "uscite nazionali"]

@@ -3,6 +3,7 @@ title: "Rafting sul Fiume color smeraldo"
 date: 2019-07-05T19:04:57+01:00
 featured_image: 'RaftingBovec.jpg'
 draft: false
+omit_header_text: true
 summary: ""
 
 tags: ["avventura"]

@@ -2,6 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
+omit_header_text: true
 summary: ""
 tags: ["comunicazioni"]
 url: "/{{ replace .Name "-" "-" | title | lower }}/"

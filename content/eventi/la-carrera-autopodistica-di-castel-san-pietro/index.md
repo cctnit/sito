@@ -2,7 +2,7 @@
 title: "La Carrera Autopodistica di Castel San Pietro"
 date: 2018-08-04T20:50:00+01:00
 draft: false
-
+omit_header_text: true
 featured_image: "LaCarreraAutopodistica.jpg"
 summary: "La Carrera Autopodistica è una competizione che fu inventata nel ..."
 tags: ["eventi", "uscite nazionali"]

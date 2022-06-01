@@ -2,7 +2,7 @@
 title: "Pomposia Imperialis Abbatia Rievocazione storica medievale"
 date: 2018-05-10T20:52:38+01:00
 draft: false
-
+omit_header_text: true
 featured_image: "PomposaImperialis.jpg"
 summary: "Nell'anno 1001 Ottone III, Principe ereditario di Sassonia e ..."
 tags: ["eventi", "uscite nazionali"]

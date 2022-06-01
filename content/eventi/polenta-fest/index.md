@@ -2,7 +2,7 @@
 title: "Polenta Fest - In collaborazione con la Pro Loco di Buttrio"
 date: 2017-10-06T20:57:32+01:00
 draft: false
-
+omit_header_text: true
 featured_image: "PolentaFest.jpg"
 summary: "In collaborazione con la Pro Loco di Buttrio parteciperemo ..."
 tags: ["eventi", "uscite internazionali"]

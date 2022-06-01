@@ -2,7 +2,7 @@
 title: "Sabato 15 Dicembre 2018 Cena di Natale"
 date: 2018-11-11T20:45:26+01:00
 draft: false
-
+omit_header_text: true
 featured_image: "pranzo-e-cena-di-natale.jpg"
 summary: "Per scambiarci gli auguri di Natale ..."
 tags: ["eventi"]
