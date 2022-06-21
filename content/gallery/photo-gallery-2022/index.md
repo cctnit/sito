@@ -17,6 +17,22 @@ album:
     album_img: "Pasquetta.jpg"
     link: "https://photos.app.goo.gl/T22P8UeZwRQkXWW29"
     alt: "In compagnia per Pasquetta"
+
+  - title: "Rievocazione medievale"
+    album_img: "RievocazioneMedievale.jpg"
+    link: "https://photos.app.goo.gl/JoPoFVX5Tcdek9tF7"
+    alt: "Alla rievocazione medievale a Montecchio Maggiore"
+
+  - title: "Gita fuoriporta sul Quarin"
+    album_img: "GitaFuoriportaACormons.jpg"
+    link: "https://photos.app.goo.gl/HXDxDQRBDfnKJQBJ7"
+    alt: "Al fresco sul Quarin"
+
+  - title: "Giro in Austria"
+    album_img: "GiroInAustria.jpg"
+    link: "https://photos.app.goo.gl/n689PxQo6k6wrkHQ6"
+    alt: "Tour nel Salisburghese"
+
 ---
 
 
