@@ -22,6 +22,7 @@ Buttrio, 15/11/2022
 Il Presidente  
 Zanolla Giorgio  
 
+
 *Note: Solo i soci effettivi ordinari e maggiorenni in regola con il tesseramento 2022 hanno diritto di voto e possono rappresentare un altro socio attraverso la [delega allegata](Delega.pdf).*  
 *E' ammessa una sola delega per partecipante.*  
 *L’assemblea sarà validamente costituita secondo le norme statutarie.*
