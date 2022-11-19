@@ -4,7 +4,7 @@ date: 2022-10-18T18:28:55+01:00
 draft: false
 summary: "Programma della Castagnata 2022"
 featured_image: "Castagne.jpg"
-tags: ["eventi","comunicazioni"]
+tags: ["comunicazioni"]
 
 # <div class="h-event">
 # <h1 class="p-name">Microformats Meetup</h1>

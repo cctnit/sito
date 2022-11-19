@@ -8,6 +8,11 @@ featured_image: 'images/CampersInSosta.jpg'
 album:
   enable: true
   item:
+  - title: "Castagnata 2022"
+    album_img: "Castagnata.jpg"
+    link: "https://photos.app.goo.gl/dD1MiafHHYgLv36W8"
+    alt: "Castagnata 2022"
+
   - title: "Olanda, Primavera 2022"
     album_img: "Olanda.jpg"
     link: "https://photos.app.goo.gl/GHbcvvefCuVqrg5d6"
