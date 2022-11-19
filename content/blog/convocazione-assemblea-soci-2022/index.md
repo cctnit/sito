@@ -3,7 +3,7 @@ title: "Convocazione Assemblea Soci 2022"
 date: 2022-11-15T18:03:42+01:00
 draft: false
 
-featured_image: "AssembleaSoci.jpg"
+featured_image: "assembleaSoci.jpg"
 summary: "Convocazione Assemblea ordinaria dei Soci"
 tags: ["comunicazioni"]
 url: '/convocazione-assemblea-soci-2022/'
