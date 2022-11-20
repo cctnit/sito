@@ -8,6 +8,11 @@ featured_image: 'images/CampersInSosta.jpg'
 album:
   enable: true
   item:
+  - title: "Zogo de l'Oca a Mirano"
+    album_img: "ZogoDeLOca.jpg"
+    link: "https://photos.app.goo.gl/CD7M3ebbmSBsHRqLA"
+    alt: "Zogo de l'Oca a Mirano"  
+
   - title: "Castagnata 2022"
     album_img: "Castagnata.jpg"
     link: "https://photos.app.goo.gl/dD1MiafHHYgLv36W8"
