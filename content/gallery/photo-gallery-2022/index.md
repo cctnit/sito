@@ -8,6 +8,11 @@ featured_image: 'images/CampersInSosta.jpg'
 album:
   enable: true
   item:
+  - title: "Festa del Bollito a Isola della Scala"
+    album_img: "FestaDelBollito.jpg"
+    link: "https://photos.app.goo.gl/tH9sksjshnm8awM37"
+    alt: "Festa del Bollito"  
+
   - title: "Zogo de l'Oca a Mirano"
     album_img: "ZogoDeLOca.jpg"
     link: "https://photos.app.goo.gl/CD7M3ebbmSBsHRqLA"
