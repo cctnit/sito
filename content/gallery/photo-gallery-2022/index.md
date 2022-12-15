@@ -8,6 +8,11 @@ featured_image: 'images/CampersInSosta.jpg'
 album:
   enable: true
   item:
+  - title: "Mercatini di Natale a Candelara, Gradara, S.Marino e S.Leo"
+    album_img: "MercatiniCandelara.jpg"
+    link: "https://photos.app.goo.gl/snaMVAindtqHX373A"
+    alt: "Zampognari nei mercatini"  
+
   - title: "Festa del Bollito a Isola della Scala"
     album_img: "FestaDelBollito.jpg"
     link: "https://photos.app.goo.gl/tH9sksjshnm8awM37"
