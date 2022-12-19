@@ -8,6 +8,10 @@ featured_image: 'images/CampersInSosta.jpg'
 album:
   enable: true
   item:
+  - title: "Pranzo di Natale 2022"
+    album_img: "PranzoNatale2022.jpg"
+    link: "https://photos.app.goo.gl/5G7ajTnBgA3Ma6qH8"
+    alt: "La nostra Torta di Natale"  
   - title: "Mercatini di Natale a Candelara, Gradara, S.Marino e S.Leo"
     album_img: "MercatiniCandelara.jpg"
     link: "https://photos.app.goo.gl/snaMVAindtqHX373A"
