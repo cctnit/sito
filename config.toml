@@ -41,34 +41,39 @@ home = ["HTML", "RSS", "JSON"]
     haschildren  = true
        [[menu.main]]
        parent = "photogallery"
+       name = "Photo Gallery 2023"
+       url = "/gallery/photo-gallery-2023"
+       weight = 1
+       [[menu.main]]
+       parent = "photogallery"
        name = "Photo Gallery 2022"
        url = "/gallery/photo-gallery-2022"
-       weight = 1
+       weight = 2
        [[menu.main]]
        parent = "photogallery"
        name = "Photo Gallery 2021"
        url = "/gallery/photo-gallery-2021"
-       weight = 2
+       weight = 3
        [[menu.main]]
        parent = "photogallery"
        name = "Photo Gallery 2020"
        url = "/gallery/photo-gallery-2020"
-       weight = 3
+       weight = 4
        [[menu.main]]
        parent = "photogallery"
        name = "Photo Gallery 2019"
        url = "/gallery/photo-gallery-2019"
-       weight = 4
+       weight = 5
        [[menu.main]]
        parent = "photogallery"
        name = "Photo Gallery 2018"
        url = "/gallery/photo-gallery-2018"
-       weight = 5
+       weight = 6
       [[menu.main]]
        parent = "photogallery"
        name = "Photo Gallery 2017"
        url = "/gallery/photo-gallery-2017"
-       weight = 6
+       weight = 7
   [[menu.main]]
     name = "Blog"
     url = "/blog/"
