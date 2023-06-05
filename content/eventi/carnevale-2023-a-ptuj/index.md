@@ -1,10 +1,10 @@
 ---
-title: "Austria 2022"
-date: 2022-06-08T20:51:52+01:00
+title: "Carnevale 2023 a Ptuj"
+date: 2023-02-25T20:51:52+01:00
 draft: false
-omit_header_text: true
-featured_image: "austria2022.jpg"
-summary: "Abbiamo visitato le miniere di sale di Hallein, il castello di Hellbrunn, la città di Kufstein, ..."
+omit_header_text: false
+featured_image: "CarnevalePtuj.jpg"
+summary: "A Ptuj (Slo) per partecipare all'antico carnevale ..."
 tags: ["eventi","uscite internazionali"]
 
 # <div class="h-event">
@@ -26,18 +26,18 @@ tags: ["eventi","uscite internazionali"]
 
 evento:
   enable: true
-  data_evento: "2022-06-01"
-  id: "austria-2022"
-  p_name: "Austria 2022"
-  dt_start: "2022-06-01"
-  dt_end: "2022-06-05"
-  p_location: "Austria"
+  data_evento: "2023-02-17"
+  id: "carnevale-2023-ptuj"
+  p_name: "Carnevale 2023 a Ptuj"
+  dt_start: "2023-02-17"
+  dt_end: "2023-02-20"
+  p_location: "Ptuj (Slo)"
   p_summary: ""
-  p_latitude: "46.534704"
-  p_longitude: "13.638906"
+  p_latitude: "46.422844" 
+  p_longitude: "15.854080"
   
 ---
 
-Abbiamo visitato le miniere di sale di Hallein, il castello di Hellbrunn e i "Mondi di cristallo Swarowski".
+A Ptuj (Slo) per partecipare all'antico carnevale Kurentovanje con le tradizionali maschere alpine in uno dei carnevali più importanti al mondo.
 
-Scarica il [Programma dell'uscita in Austria 2022](ProgrammaAustria2022.pdf)
+Scarica il [Programma dell'uscita al Carnevale di Ptuj](ProgrammaCarnevaleAPtuj.pdf)
