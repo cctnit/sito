@@ -88,6 +88,23 @@ home = ["HTML", "RSS", "JSON"]
   priority = 0.5
   filename = "sitemap.xml"  
 
+
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+
+
 [params]
   author = "CCTN"
   favicon = "/images/favicon.ico"

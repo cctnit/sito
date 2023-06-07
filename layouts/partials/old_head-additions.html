@@ -1,0 +1,32 @@
+{{/* template "_internal/google_analytics.html" . */}}
+{{/* template "_internal/google_analytics_async.html" . */}}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTTJ1NTVM7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZTTJ1NTVM7');
+</script>
+
+
+<style>
+
+header.pageheader {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+img.pageheader, picture.pageheader {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+</style>

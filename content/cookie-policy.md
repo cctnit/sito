@@ -26,15 +26,7 @@ Twitter (configurazione): https://twitter.com/settings/security
 Google+ informativa: http://www.google.it/intl/it/policies/technologies/cookies/
 Google+ (configurazione): http://www.google.it/intl/it/policies/technologies/managing/
 
-Includiamo anche taluni componenti da Google Analytics, un servizio di analisi del traffico web fornito da Google. Anche in questo caso si tratta di cookie di terze parti raccolti e gestiti in modo anonimo per monitorare e migliorare le prestazioni del sito ospite (performance cookie).
-
-Google Analytics può raccogliere e analizzare in forma anonima le informazioni sui comportamenti di utilizzo. Tali informazioni vengono raccolte da Google Analytics, che le elabora allo scopo di redigere report sui siti web stessi. Questo sito non utilizza (e non consente a terzi di utilizzare) lo strumento di analisi di Google per monitorare o per raccogliere informazioni personali di identificazione. Google non associa l’indirizzo IP a nessun altro dato posseduto da Google né cerca di collegare un indirizzo IP con l’identità di un utente. Google può anche comunicare queste informazioni a terzi ove ciò sia imposto dalla legge o laddove tali terzi trattino le suddette informazioni per conto di Google.
-
-Per ulteriori informazioni, si rinvia al link di seguito indicato:
-https://www.google.it/policies/privacy/partners/
-
-L’utente può disabilitare in modo selettivo l’azione di Google Analytics installando sul proprio browser la componente di opt-out fornito da Google. Per disabilitare l’azione di Google Analytics, si rinvia al link di seguito indicato:
-https://tools.google.com/dlpage/gaoptout
+Non utilizziamo Google Analytics.
 
 Se hai domande o commenti concernenti la presente politica sui cookie, contattaci all’indirizzo: camperclub.torre.natisone@gmail.com
 Come modificare le impostazioni sui cookie
@@ -53,5 +45,5 @@ La maggior parte dei browser permette di cancellare i cookie dal disco fisso del
 
 ## Garante della Privacy sui Cookie:
 
-[Informativa e consenso per l’uso dei cookie](http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3118884)
-[Faq in materia di cookie](http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/2142939)
+[Informativa e consenso per l’uso dei cookie](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3118884)
+[Faq in materia di cookie](https://www.garanteprivacy.it/faq/cookie)
