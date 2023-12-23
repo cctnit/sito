@@ -3,7 +3,7 @@ title: "I Mercatini di Natale in Germania"
 date: 2023-11-28T19:21:41+01:00
 draft: false
 
-featured_image: "MercatiniNatale2023.jpg"
+featured_image: "mercatiniNatale2023.jpg"
 summary: "In Germania per i mercatini di Natale"
 tags: ["eventi", "uscite internazionali"]
 
