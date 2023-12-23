@@ -36,8 +36,18 @@ album:
     album_img: "Quintana.jpg"
     link: "https://photos.app.goo.gl/yRJetxnmbWtN19cK8"
     alt: "Un momento della sfilata prima della Giostra"
-
-
+  - title: "Visita a Soncino"
+    album_img: "Soncino.jpg"
+    link: "https://photos.app.goo.gl/wbuYQMNnpMBxNQwi8"
+    alt: "Il castello di Soncino"
+  - title: "Castagnata 2023"
+    album_img: "Castagnata2023.jpg"
+    link: "https://photos.app.goo.gl/xcnGoANj46RwGRgp6"
+    alt: "Le macchine lavorano per la castagnata"
+  - title: "Mercatini di Natale 2023"
+    album_img: "MercatiniNatale2023.jpg"
+    link: "https://photos.app.goo.gl/eY5nwsDwvqjHjoMTA"
+    alt: "Sulla via dei mercatini di Natale"
 
 ---
 
