@@ -4,7 +4,7 @@ date: 2022-11-14T15:51:36+01:00
 draft: false
 omit_header_text: true
 featured_image: "obbligo_catene.jpg"
-summary: ""
+summary: "Il Codice della Strada sancisce l'obbligo ..."
 tags: ["comunicazioni"]
 url: '/obbligo-catene/'
 ---

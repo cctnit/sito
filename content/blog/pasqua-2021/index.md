@@ -6,6 +6,7 @@ omit_header_text: true
 featured_image: "Auguri-Pasqua-2021.jpg"
 tags: ["comunicazioni"]
 url: '/pasqua-2021/'
+summary: "Il Camper Club Torre-Natisone augura a tutti i Soci e simpatizzanti Buona Pasqua"
 ---
 
 {{< figure src="Auguri-Pasqua-2021.jpg" alt="Cartolina auguri" class="w-60 fl" >}}

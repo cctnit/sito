@@ -6,6 +6,7 @@ omit_header_text: true
 featured_image: "AuguriPasqua2020.jpg"
 tags: ["comunicazioni"]
 url: '/auguri-pasqua-2020/'
+summary: "*A tutti un sincero augurio di Buona Pasqua.*"
 ---
 
 {{< figure src="AuguriPasqua2020.jpg" alt="Cartolina auguri" class="w-60 fl" >}}

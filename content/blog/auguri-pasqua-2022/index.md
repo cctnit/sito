@@ -6,6 +6,7 @@ omit_header_text: true
 featured_image: "AuguriPasqua2022.jpg"
 tags: ["comunicazioni"]
 url: '/auguri-pasqua-2022/'
+Summary: "*A tutti un sincero augurio di Buona Pasqua.*"
 ---
 
 {{< figure src="AuguriPasqua2022.jpg" alt="Cartolina auguri" class="w-60 fl" >}}
