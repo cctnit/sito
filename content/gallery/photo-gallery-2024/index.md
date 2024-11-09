@@ -20,7 +20,10 @@ album:
     album_img: "Bologna.jpg"
     link: "https://photos.app.goo.gl/YvgWW5Hu6vRSgd4D9"
     alt: "Le due torri di Bologna"  
-
+  - title: "Polcenigo e Sacile"
+    album_img: "Gorgazzo.jpg"
+    link: "https://photos.app.goo.gl/39zTQYTUPoT4bBEq8"
+    alt: "Le sorgenti del Gorgazzo"  
 
 ---
 
