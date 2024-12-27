@@ -36,10 +36,18 @@ album:
     album_img: "SanMartino.jpg"
     link: "https://photos.app.goo.gl/118MwZK7XNRmtN9w8"
     alt: "Figuranti alla rievocazione storica"
-  - title: "Castagnata 2024"
+  - title: "Castagnata"
     album_img: "Castagnata.jpg"
     link: "https://photos.app.goo.gl/vpMFzneNfELryS9i8"
     alt: "Con pazienza si preparano le castagne"             
+  - title: "Mercatini a Trento"
+    album_img: "MercatiniTrento.jpg"
+    link: "https://photos.app.goo.gl/MKyqksWU2L1kjden7"
+    alt: "I mercatini sotto il castello di Trento"
+  - title: "Pranzo di Natale"
+    album_img: "PranzoNatale.jpg"
+    link: "https://photos.app.goo.gl/r38H61G5kYf1eERc9"
+    alt: "Regali di Natale"
 
 ---
 
