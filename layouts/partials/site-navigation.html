@@ -14,7 +14,7 @@
     {{end}}
 
     <div class="flex-l items-center menu">
-      {{ partial "i18nlist.html" . }}
+      {{ partials.Include "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
         <input type="checkbox" id="menuToggle">
         <label for="menuToggle" class="menu-icon pointer"><i class="fa fa-bars" style="color: white"></i></label>
@@ -50,7 +50,7 @@
           </ul>
         </div>  
       {{end}}
-      {{ partialCached "social-follow.html" . }}
+      {{ partials.IncludeCached "social/follow.html" . }}
     </div>
   </div>
 </nav>

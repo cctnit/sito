@@ -1,18 +1,18 @@
 <footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
   <div class="white-70">Tags</div>
-  <div>{{ partial "site-footer-tags.html" . }}</div>
+  <div>{{ partials.Include "site-footer-tags.html" . }}</div>
   <div class="white-70 center">{{ .Site.Params.indirizzo_footer }} <a href="http://www.comune.buttrio.ud.it/">{{ partial "image.html" (dict "Src" "images/stemma_buttrio.png" "Size" "80x80" "Class" "w100 mw4-ns v-mid" "Alt" "Comune di Buttrio") }}</a> <a href="https://www.buri.it">{{ partial "image.html" (dict "Src" "images/buri_piccola.png" "Size" "50x49" "Class" "w100 mw4-ns v-mid" "Alt" "Pro Loco Buri") }}</a></div>
-  <div class="ttu">{{ partial "site-navigation-footer.html" . }}</div>
+  <div class="ttu">{{ partials.Include "site-navigation-footer.html" . }}</div>
   <div ><a class="link f5 no-underline br-2 ph3 pv2 mb2 dib white-70 sans-serif" href="/privacy-policy">Privacy Policy</a>
     <span class="white-70">Powered by:</span> 
     <a class="link f5 no-underline br-2 ph3 pv2 mb2 dib white-70 sans-serif" href="https://github.com">
-      {{ partial "image.html" (dict "Src" "images/github.jpg" "Size" "57x56" "Class" "w100 mw4-ns v-mid" ) }}
+      {{ partials.Include "image.html" (dict "Src" "images/github.jpg" "Size" "57x56" "Class" "w100 mw4-ns v-mid" ) }}
     </a>
     <a class="link f5 no-underline br-2 ph3 pv2 mb2 dib white-70 sans-serif" href="https://gohugo.io/">
-      {{ partial "image.html" (dict "Src" "images/hugo.jpg" "Size" "92x26" "Class" "w100 mw4-ns v-mid" "Alt" "Fatto con Hugo") }}
+      {{ partials.Include "image.html" (dict "Src" "images/hugo.jpg" "Size" "92x26" "Class" "w100 mw4-ns v-mid" "Alt" "Fatto con Hugo") }}
     </a>
     <a class="link f5 no-underline br-2 ph3 pv2 mb2 dib white-70 sans-serif" href="/blog/index.xml" type="application/rss+xml">
-      {{ partial "svg/Feed-icon.svg" }}
+      {{ partials.Include "svg/Feed-icon.svg" }}
     </a>    
   </div>
   <div class="flex justify-between">

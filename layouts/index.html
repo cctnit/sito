@@ -9,7 +9,7 @@
     <div class="db pv4 ph3 ph0-l no-underline dark-gray">
     <div class="flex flex-column flex-row-ns">
     <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-        {{ partial "image.html" (dict "Src" "images/Noichisiamo.jpg" "Size" "384x188" "Class" "img" "Alt" "Soci del Club") }}
+        {{ partials.Include "image.html" (dict "Src" "images/Noichisiamo.jpg" "Size" "384x188" "Class" "img" "Alt" "Soci del Club") }}
     </div>
     <div class="blah w-100 w-60-ns pl3-ns">
       <h1 class="f3 fw1 athelas mt0 lh-title">
@@ -30,13 +30,13 @@
 <section class="w-100 mw8">
   <div class="relative w-100 mb4">
     <div class="relative w-100 mb4">
-      {{ partial "messaggio.html" . }}
+      {{ partials.Include "messaggio.html" . }}
     </div>
   </div>
 </section>
 <section class="w-100 mw8">
   
-      {{ partial "frasi.html" . }}
+      {{ partials.Include "frasi.html" . }}
  
 </section>
 </div>

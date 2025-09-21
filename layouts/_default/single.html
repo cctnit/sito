@@ -1,9 +1,10 @@
 {{ define "header" }}
    {{/* We can override any block in the baseof file be defining it in the template */}}
-  {{ partial "page-header.html" . }}
+  {{ partials.Include "page-header.html" . }}
 {{ end }}
 
 {{ define "main" }}
+  {{ $page := .}}
   {{ $section := .Site.GetPage "section" .Section }}
   <article class="flex-l flex-wrap justify-between mw8 center ph3">
     <header class="mt4 w-100">
@@ -12,20 +13,23 @@
           CurrentSection allows us to use the section title instead of inferring from the folder.
           https://gohugo.io/variables/page/#section-variables-and-methods
           */}}
-        {{with .CurrentSection.Title }}{{. | upper }}{{end}}
+        {{.CurrentSection.Title }}
       </aside>
-      {{ partial "social-share.html" . }}
+      {{- partials.IncludeCached "social/share.html" . . -}}
       <h1 class="f1 athelas mt3 mb1">
         {{- .Title -}}
       </h1>
-      {{ with .Params.author | default .Site.Params.author }}
+      {{ with .Params.author | compare.Default .Site.Params.author }}
       <p class="tracked">
-        {{ $.Render "by" }} <strong>
+        {{- if compare.Eq $page.Language "de" "en" "es" "fr" "it" "no" "pt" -}}
+          {{- lang.Translate "by" -}}
+        {{ end -}} <strong>
         {{- if reflect.IsSlice . -}}
-            {{ delimit . ", " | markdownify }}
+            {{ collections.Delimit . ", " | transform.Markdownify }}
         {{- else -}}
-            {{ . | markdownify }}
+            {{ . | transform.Markdownify }}
         {{- end -}}
+
         </strong>
       </p>
       {{ end }}
@@ -49,19 +53,19 @@
     </header>
     <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} w-two-thirds-l">
       {{- .Content -}}
-      {{- partial "tags.html" . -}}
+      {{- partials.Include "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">
       {{ if .Site.Config.Services.Disqus.Shortname }}
         {{ template "_internal/disqus.html" . }}
       {{ end }}
       {{ if .Site.Params.commentoEnable }}
-        {{- partial "commento.html" . -}}
+        {{- partials.Include "commento.html" . -}}
       {{ end }}
       </div>
     </div>
 
     <aside class="w-30-l mt6-l">
-      {{- partial "menu-contextual.html" . -}}
+      {{- partials.Include "menu-contextual.html" . -}}
     </aside>
 
   </article>

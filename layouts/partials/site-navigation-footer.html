@@ -8,7 +8,7 @@
       {{ end }}
     </a>
     <div class="flex-l items-center menu">
-      {{ partial "i18nlist.html" . }}
+      {{ partials.Include "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
         <ul class="nav menu">
           {{ range .Site.Menus.main }}
@@ -24,7 +24,7 @@
           {{ end }}
         </ul>
        {{ end }}
-      {{ partialCached "social-follow.html" . }}
+      {{ partials.IncludeCached "social/follow.html" . }}
     </div>
   </div>
 </nav>

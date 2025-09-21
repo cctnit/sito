@@ -1,9 +1,10 @@
 {{ define "header" }}
    {{/* We can override any block in the baseof file be defining it in the template */}}
-  {{ partial "page-header.html" . }}
+  {{ partials.Include "page-header.html" . }}
 {{ end }}
 
 {{ define "main" }}
+  {{ $page := .}}
   {{ $section := .Site.GetPage "section" .Section }}
   <article class="flex-l flex-wrap justify-between mw8 center ph3">
     <header class="mt4 w-100">
@@ -12,20 +13,22 @@
           CurrentSection allows us to use the section title instead of inferring from the folder.
           https://gohugo.io/variables/page/#section-variables-and-methods
           */}}
-        {{with .CurrentSection.Title }}{{. | upper }}{{end}}
+        {{.CurrentSection.Title }}
       </aside>
-      {{ partial "social-share.html" . }}
+      {{- partials.Include "social/share.html" . . -}}
       <h1 class="f1 athelas mt3 mb1">
         {{- .Title -}}
       </h1>
-      {{ with .Params.author | default .Site.Params.author }}
+      {{ with .Params.author | compare.Default .Site.Params.author }}
       <p class="tracked">
-          By <strong>
-          {{ if reflect.IsSlice . }}
-              {{ delimit . ", " | markdownify }}
-          {{else}}
-              {{ . | markdownify }}
-          {{ end }}
+        {{- if compare.Eq $page.Language "de" "en" "es" "fr" "it" "no" "pt" -}}
+          {{- lang.Translate "by" -}}
+        {{ end -}} <strong>
+        {{- if reflect.IsSlice . -}}
+            {{ collections.Delimit . ", " | transform.Markdownify }}
+        {{- else -}}
+            {{ . | transform.Markdownify }}
+        {{- end -}}         
           </strong>
       </p>
       {{ end }}
@@ -49,21 +52,21 @@
     </header>
     <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
       {{- .Content -}}
-      {{- partial "tags.html" . -}}
+      {{- partials.Include "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">
       {{ if .Site.Config.Services.Disqus.Shortname }}
         {{ template "_internal/disqus.html" . }}
       {{ end }}
       {{ if .Site.Params.commentoEnable }}
-        {{- partial "commento.html" . -}}
+        {{- partials.Include "commento.html" . -}}
       {{ end }}
       </div>
     </div>
 
     <aside class="w-30-l mt6-l">
-      {{- partial "evento-microformati.html" . -}}
+      {{- partials.Include "evento-microformati.html" . -}}
     </aside>
 
   </article>
-  {{- partial "nota-eventi.html" . -}}
+  {{- partials.Include "nota-eventi.html" . -}}
 {{ end }}
