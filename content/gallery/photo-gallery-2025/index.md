@@ -16,6 +16,10 @@ album:
     album_img: "ViaggioInSicilia.jpg"
     link: "https://photos.app.goo.gl/amr8rTA9uPMXxKxV6"
     alt: "Il Duomo di Modica"  
+  - title: "Palio delle Zattere - Valstagna"
+    album_img: "PalioZattere.jpg"
+    link: "https://photos.app.goo.gl/sju6XuNobng5yhwn8"
+    alt: "un momento del Palio delle Zattere"  
 
 ---
 
