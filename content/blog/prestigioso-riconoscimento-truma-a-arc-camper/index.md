@@ -3,7 +3,6 @@ title: "Prestigioso Riconoscimento Truma a Arc Camper"
 date: 2019-10-19T23:54:29+01:00
 draft: false
 omit_header_text: true
-omit_header_text: true
 featured_image: 'Riconoscimento-ad-Arc-Camper-2.jpg'
 summary: "Il nostro socio Francesco Morettin di Arc Camper è stato insignito ..."
 tags: ["comunicazioni"]
