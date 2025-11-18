@@ -32,7 +32,10 @@ album:
     album_img: "Feltre.JPG"
     link: "https://photos.app.goo.gl/WAt6PrJEH3tkkrrg8"
     alt: "sfilata al Palio di Feltre"  
-
+  - title: "Castagnata 2025"
+    album_img: "Castagnata2025.JPG"
+    link: "https://photos.app.goo.gl/JA85KqjBYjcsmprk8"
+    alt: "le nostre castagne"  
 ---
 
 
