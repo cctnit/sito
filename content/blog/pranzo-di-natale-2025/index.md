@@ -45,6 +45,6 @@ Costo del pranzo:
 
 **Su disposizione della proprietà gli animali non sono ammessi.**
 
-**Adesioni entro martedì 9 dicembre tramite WhatsApp "Prenotazioni" oppure in sede il martedì dalle 18.00 alle 19.30**
+**Adesioni entro venerdì 12 dicembre tramite WhatsApp "Prenotazioni" oppure in sede il martedì dalle 18.00 alle 19.30 (la data sulle locandine è errata)**
 
 Scarica il [Programma del Pranzo di Natale 2025](ProgrammaPranzoDiNatale2025.pdf).
