@@ -35,7 +35,13 @@ album:
   - title: "Castagnata 2025"
     album_img: "Castagnata2025.JPG"
     link: "https://photos.app.goo.gl/JA85KqjBYjcsmprk8"
-    alt: "le nostre castagne"  
+    alt: "le nostre castagne"
+  - title: "Pranzo di Natale"
+    album_img: "PranzoNatale.jpg"
+    link: "https://photos.app.goo.gl/tjgDwNNS6k4dNtfh7"
+    alt: "Regali di Natale"
+
+
 ---
 
 
