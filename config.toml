@@ -1,5 +1,5 @@
 baseURL = 'https://www.camperclubtorrenatisone.it/'
-languageCode = 'it-it'
+language.locale = 'it-it'
 title = 'Camper Club Torre Natisone'
 theme = "ananke"
 DefaultContentLanguage = "it"
