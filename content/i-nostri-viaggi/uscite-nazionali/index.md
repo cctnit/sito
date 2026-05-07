@@ -7,4 +7,5 @@ omit_header_text: true
 summary: ""
 ---
 
+{{< figure src="UsciteNazionali.jpg" class="fr w50" >}}
 [Uscite nazionali](/tags/uscite-nazionali/)
