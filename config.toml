@@ -2,7 +2,15 @@ baseURL = 'https://www.camperclubtorrenatisone.it/'
 language.locale = 'it-it'
 title = 'Camper Club Torre Natisone'
 theme = "ananke"
-DefaultContentLanguage = "it"
+defaultContentLanguage = "it"
+
+[languages]
+  [languages.it]
+    direction = 'ltr'
+    label = 'Italian'
+    locale = 'it-IT'
+    weight = 1
+
 googleAnalytics = ""
 enableRobotsTXT = false
 
@@ -135,7 +143,7 @@ home = ["HTML", "RSS", "JSON"]
   # custom_css = ["custom.css"]
   indirizzo_footer = "indirizzo: via Cividale 21- 33042 Buttrio (UD) - C.F. 9414372301"
   cctntags = ["uscite nazionali", "uscite internazionali", "comunicazioni", "eventi"]
-  custom_css = ["css/solid.min.css", "css/fontawesome.min.css", "css/custom.css"]
+  ananke.custom_css = ["css/solid.min.css", "css/fontawesome.min.css", "css/custom.css"]
   # search
   search = true
   searchSections = ["blog","eventi","i-nostri-viaggi"]

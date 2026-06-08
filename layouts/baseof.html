@@ -27,7 +27,7 @@
     {{ partials.Include "site-scripts.html" . }}    
 
     {{ block "favicon" . }}
-      {{ partialCached "site-favicon.html" . }}
+      {{ partials.IncludeCached "site-favicon.html" . }}
     {{ end }}
 
     {{ if .OutputFormats.Get "RSS" }}
@@ -44,11 +44,13 @@
     {{ end }}
     
     {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
+    {{/* former internal templates */}}
     {{- partial "opengraph.html" . -}}
     {{- partial "schema.html" . -}}
     {{- partial "twitter_cards.html" . -}}
 
     {{ if hugo.IsProduction }}
+       {{/* former internal template */}}
        {{/* 
        {{ partial "google_analytics_async.html" . }}
        */}}
@@ -57,13 +59,37 @@
   </head>
 
   {{- $environment := hugo.Environment | compare.Default "production" -}}
-  <body class="ma0 {{ $.Param "body_classes"  | compare.Default "avenir bg-near-white"}} {{ $environment }}">
 
+  {{/* Generate dynamic classes for the body tag */}}
+  {{- $body_classes := slice "ma0" ($.Param "body_classes" | default "avenir bg-near-white") $environment -}}
+  {{- $body_classes = $body_classes | append (printf "is-%s" .Kind) -}}
+
+  {{- if .IsPage -}}
+    {{- $body_classes = $body_classes | append "is-page" -}}
+    {{- with .File -}}
+      {{- $body_classes = $body_classes | append (printf "page-%s" .ContentBaseName) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if .IsSection -}}{{- $body_classes = $body_classes | append "is-section" -}}{{- end -}}
+
+  <body class="{{ delimit $body_classes " " }}">
+    {{- partials.Include "hook.html" (dict "hook" "body-start" "context" .) -}}
+    {{- partials.Include "hook.html" (dict "hook" "header-before" "context" .) -}}
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
+    {{- partials.Include "hook.html" (dict "hook" "header-after" "context" .) -}}
     <main class="pb7" role="main">
+      {{- partials.Include "hook.html" (dict "hook" "main-before" "context" .) -}}
       {{ block "main" . }}{{ end }}
+      {{- partials.Include "hook.html" (dict "hook" "main-after" "context" .) -}}
     </main>
+    {{- partials.Include "hook.html" (dict "hook" "footer-before" "context" .) -}}
     {{ block "footer" . }}{{ partials.IncludeCached "site-footer.html" . }}{{ end }}
+    {{- partials.Include "hook.html" (dict "hook" "footer-after" "context" .) -}}
+    {{- partials.Include "hook.html" (dict "hook" "body-end" "context" .) -}}
     {{ partials.IncludeCached "script.html" . }}
    </body>
 </html>
+{{- with (templates.Defer (dict "key" "hooks-collector")) -}}
+  {{- partials.Include "func/hooks/collector-dump.html" . }}
+{{ end -}}

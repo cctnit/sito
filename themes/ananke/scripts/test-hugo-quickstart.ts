@@ -2,9 +2,25 @@
 
 import { spawn } from "node:child_process";
 import { constants } from "node:fs";
-import { access, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import {
+	access,
+	copyFile,
+	cp,
+	mkdir,
+	mkdtemp,
+	readFile,
+	rm,
+	stat,
+	writeFile,
+} from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { basename, dirname, join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+/**
+ * Absolute path to the theme repository root (the parent of `scripts/`).
+ */
+const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 interface CommandResult {
 	code: number | null;
@@ -23,8 +39,22 @@ interface StepDefinition {
 	expectedFiles?: string[];
 }
 
+/**
+ * Where the theme under test comes from.
+ *
+ * - `local`: install the local working tree of this repository (default), so the
+ *   test exercises the actual code on the current branch, including uncommitted
+ *   changes. This is what makes the test meaningful as a pre-push / CI gate.
+ * - `submodule`: clone the published theme from its remote via `git submodule add`,
+ *   reproducing the documented quickstart install. Useful to verify the public
+ *   install path, but does **not** see local changes.
+ */
+type ThemeSource = "local" | "submodule";
+
 interface RoutineOptions {
 	projectName: string;
+	themeSource: ThemeSource;
+	themePath: string;
 	themeRepo: string;
 	themeDir: string;
 	themeName: string;
@@ -48,6 +78,8 @@ interface HtmlAssertion {
 
 const DEFAULT_OPTIONS: RoutineOptions = {
 	projectName: "quickstart",
+	themeSource: "local",
+	themePath: REPO_ROOT,
 	themeRepo: "https://github.com/gohugo-ananke/ananke.git",
 	themeDir: "themes/ananke",
 	themeName: "ananke",
@@ -68,7 +100,11 @@ Usage:
 
 Options:
   --project-name=<name>         Hugo project folder name inside the temp directory
-  --theme-repo=<url>            Git URL for the theme submodule
+  --theme-path=<path>           Install the theme from this local directory (default: this repo).
+                                Implies local mode; tests the actual working tree.
+  --use-submodule               Install the published theme via "git submodule add" instead
+                                of the local working tree (verifies the documented quickstart).
+  --theme-repo=<url>            Git URL for the theme submodule (only used with --use-submodule)
   --theme-dir=<path>            Theme target directory inside the project
   --theme-name=<name>           Theme name written into hugo.toml
   --config-file=<file>          Hugo config file to update
@@ -108,6 +144,17 @@ function parseArgs(argv: string[]): RoutineOptions {
 
 		if (arg === "--quiet") {
 			options.verbose = false;
+			continue;
+		}
+
+		if (arg === "--use-submodule") {
+			options.themeSource = "submodule";
+			continue;
+		}
+
+		if (arg.startsWith("--theme-path=")) {
+			options.themePath = resolve(arg.slice("--theme-path=".length));
+			options.themeSource = "local";
 			continue;
 		}
 
@@ -664,6 +711,395 @@ async function assertDraftHiddenInProduction(
 }
 
 /**
+ * Sentinel CSS class used to verify the configurable hero header spacing.
+ *
+ * Issue #504: the height of the hero header is controlled by the
+ * `header_section_class` parameter. The value is unique so it can only appear in
+ * the output when the front matter override is honoured.
+ */
+const HEADER_SECTION_CLASS_MARKER = "ananke-header-test-pv7";
+
+/**
+ * Default header section spacing rendered by `page-header.html` for a single
+ * page with a featured image when `header_section_class` is not set.
+ */
+const DEFAULT_PAGE_HEADER_SECTION_CLASS = "tc-l pv6 ph3 ph4-ns";
+
+/**
+ * Create two single pages that exercise the configurable header section class:
+ * one overrides `header_section_class` in front matter, the other relies on the
+ * theme default. Both set `featured_image` so the hero header branch renders.
+ *
+ * @param contentDir Absolute path to the project `content` directory.
+ */
+async function writeHeaderSectionClassFixtures(
+	contentDir: string,
+): Promise<void> {
+	const overridePage = [
+		"+++",
+		"title = 'Custom Header Height'",
+		"featured_image = '/images/custom-hero.jpg'",
+		`header_section_class = '${HEADER_SECTION_CLASS_MARKER} ph3 ph4-ns'`,
+		"+++",
+		"",
+		"Body.",
+		"",
+	].join("\n");
+
+	const defaultPage = [
+		"+++",
+		"title = 'Default Header Height'",
+		"featured_image = '/images/default-hero.jpg'",
+		"+++",
+		"",
+		"Body.",
+		"",
+	].join("\n");
+
+	await writeTextFile(join(contentDir, "custom-header.md"), overridePage);
+	await writeTextFile(join(contentDir, "default-header.md"), defaultPage);
+}
+
+/**
+ * Assert that the configurable `header_section_class` parameter is honoured on
+ * hero headers and that omitting it keeps the historical default spacing.
+ *
+ * @param projectRoot Absolute path to the temporary quickstart project.
+ * @throws Error when the override is dropped, leaks, or the default changes.
+ */
+async function assertHeaderSectionClassConfigurable(
+	projectRoot: string,
+): Promise<void> {
+	const failures: string[] = [];
+
+	const overrideHtml = await readTextFile(
+		join(projectRoot, "public", "custom-header", "index.html"),
+	);
+	const defaultHtml = await readTextFile(
+		join(projectRoot, "public", "default-header", "index.html"),
+	);
+
+	if (!overrideHtml.includes(HEADER_SECTION_CLASS_MARKER)) {
+		failures.push(
+			`- custom 'header_section_class' value '${HEADER_SECTION_CLASS_MARKER}' was not applied to the hero header`,
+		);
+	}
+
+	if (defaultHtml.includes(HEADER_SECTION_CLASS_MARKER)) {
+		failures.push(
+			"- custom 'header_section_class' value leaked onto a page that did not set it",
+		);
+	}
+
+	if (!defaultHtml.includes(DEFAULT_PAGE_HEADER_SECTION_CLASS)) {
+		failures.push(
+			`- default header section spacing '${DEFAULT_PAGE_HEADER_SECTION_CLASS}' was missing when 'header_section_class' was not set`,
+		);
+	}
+
+	if (failures.length > 0) {
+		throw new Error(
+			[
+				"Strict assertion failed: configurable header section class did not behave as expected.",
+				"Failed assertions:",
+				...failures,
+			].join("\n"),
+		);
+	}
+}
+
+/**
+ * Markup only emitted by `summary-with-image.html` when a featured image is
+ * rendered, used to detect that list cards switched to the image template.
+ */
+const LIST_CARD_IMAGE_MARKER = 'class="img"';
+
+/**
+ * Markup emitted by the summary templates when a card date is rendered.
+ */
+const SUMMARY_CARD_DATE_MARKER = "datetime=";
+
+/**
+ * Create a content section whose list page exercises both the image and the
+ * date behaviour of summary cards: one page has a featured image, the other
+ * does not, and both carry an explicit date.
+ *
+ * @param contentDir Absolute path to the project `content` directory.
+ */
+async function writeListCardFixtures(contentDir: string): Promise<void> {
+	const sectionDir = join(contentDir, "cards");
+	await mkdir(sectionDir, { recursive: true });
+
+	const sectionIndex = ["+++", "title = 'Cards'", "+++", "", ""].join("\n");
+
+	const withImage = [
+		"+++",
+		"title = 'Card With Image'",
+		"date = 2024-01-15T00:00:00Z",
+		"featured_image = '/images/card-hero.jpg'",
+		"+++",
+		"",
+		"Card body.",
+		"",
+	].join("\n");
+
+	const withoutImage = [
+		"+++",
+		"title = 'Card Without Image'",
+		"date = 2024-02-20T00:00:00Z",
+		"+++",
+		"",
+		"Card body.",
+		"",
+	].join("\n");
+
+	await writeTextFile(join(sectionDir, "_index.md"), sectionIndex);
+	await writeTextFile(join(sectionDir, "with-image.md"), withImage);
+	await writeTextFile(join(sectionDir, "without-image.md"), withoutImage);
+}
+
+/**
+ * Assert that a list page renders summary cards with the expected image and
+ * date behaviour.
+ *
+ * @param listHtml HTML from the rendered list page.
+ * @param label Human-readable description of the configuration under test.
+ * @param expectations Whether image cards and dates are expected in the output.
+ * @throws Error when the rendered cards do not match the expectations.
+ */
+function assertListCardSummaries(
+	listHtml: string,
+	label: string,
+	expectations: { images: boolean; dates: boolean },
+): void {
+	const failures: string[] = [];
+	const hasImage = listHtml.includes(LIST_CARD_IMAGE_MARKER);
+	const hasDate = listHtml.includes(SUMMARY_CARD_DATE_MARKER);
+
+	if (expectations.images && !hasImage) {
+		failures.push(
+			"- expected image summary cards but the list rendered no card image",
+		);
+	}
+
+	if (!expectations.images && hasImage) {
+		failures.push(
+			"- image summary cards were rendered when 'ananke.pages.show_list_images' was not enabled",
+		);
+	}
+
+	if (expectations.dates && !hasDate) {
+		failures.push(
+			"- expected summary card dates but none were rendered by default",
+		);
+	}
+
+	if (!expectations.dates && hasDate) {
+		failures.push(
+			"- summary card dates were rendered when 'ananke.pages.show_date' was false",
+		);
+	}
+
+	if (failures.length > 0) {
+		throw new Error(
+			[
+				`Strict assertion failed: list card summaries (${label}) did not behave as expected.`,
+				"Failed assertions:",
+				...failures,
+			].join("\n"),
+		);
+	}
+}
+
+/**
+ * Determine whether a directory is the work tree of a Git repository.
+ *
+ * @param path Absolute directory path.
+ * @returns True when `path` is inside a Git work tree.
+ */
+async function isGitWorkTree(path: string): Promise<boolean> {
+	const result = await runCommand(
+		"git",
+		["-C", path, "rev-parse", "--is-inside-work-tree"],
+		path,
+	);
+
+	return result.code === 0 && result.stdout.trim() === "true";
+}
+
+/**
+ * Copy the local theme working tree into the project's theme directory.
+ *
+ * When the source is a Git work tree, the file list is derived from Git so that
+ * ignored paths (`node_modules`, `public`, generated resources, ...) are skipped
+ * automatically while uncommitted and untracked-but-not-ignored changes are still
+ * included. This makes the test reflect the exact state of the current branch.
+ *
+ * @param themePath Absolute path to the local theme source directory.
+ * @param destination Absolute path to the theme directory inside the project.
+ * @throws Error when the source contains no theme files.
+ */
+async function copyLocalTheme(
+	themePath: string,
+	destination: string,
+): Promise<void> {
+	if (await isGitWorkTree(themePath)) {
+		const listing = await runCommand(
+			"git",
+			[
+				"-C",
+				themePath,
+				"ls-files",
+				"-z",
+				"--cached",
+				"--others",
+				"--exclude-standard",
+			],
+			themePath,
+		);
+
+		if (listing.code !== 0) {
+			throw new Error(
+				`Failed to list theme files via git in ${themePath}:\n${listing.stderr}`,
+			);
+		}
+
+		const relativePaths = listing.stdout.split("\0").filter(Boolean);
+
+		if (relativePaths.length === 0) {
+			throw new Error(`No theme files found in ${themePath}`);
+		}
+
+		for (const relativePath of relativePaths) {
+			const source = join(themePath, relativePath);
+
+			try {
+				const stats = await stat(source);
+				if (!stats.isFile()) {
+					continue;
+				}
+			} catch {
+				// Tracked but deleted in the work tree: nothing to copy.
+				continue;
+			}
+
+			const target = join(destination, relativePath);
+			await mkdir(dirname(target), { recursive: true });
+			await copyFile(source, target);
+		}
+
+		return;
+	}
+
+	// Fallback for a non-Git source directory: copy recursively while excluding
+	// heavy or generated paths that would never ship with the theme.
+	const excludedNames = new Set(["node_modules", "public", ".git"]);
+	await cp(themePath, destination, {
+		recursive: true,
+		filter: (source: string): boolean => {
+			if (excludedNames.has(basename(source))) {
+				return false;
+			}
+
+			return !source.includes(join("resources", "_gen"));
+		},
+	});
+}
+
+/**
+ * Install the theme into the temporary project, either from the local working
+ * tree (default) or from the published remote via a Git submodule.
+ *
+ * @param options Runtime options.
+ * @param projectRoot Absolute path to the temporary quickstart project.
+ * @param reports Accumulated step reports (appended to in submodule mode).
+ * @throws Error when installation fails or the theme is incomplete.
+ */
+async function installTheme(
+	options: RoutineOptions,
+	projectRoot: string,
+	reports: StepReport[],
+): Promise<void> {
+	const destination = join(projectRoot, options.themeDir);
+
+	if (options.verbose) {
+		console.log(`\n[RUN] Install theme (source: ${options.themeSource})`);
+	}
+
+	if (options.themeSource === "submodule") {
+		const step: StepDefinition = {
+			name: "Add theme as Git submodule",
+			command: "git",
+			args: ["submodule", "add", options.themeRepo, options.themeDir],
+			cwd: projectRoot,
+			expectedFiles: [options.themeDir, ".gitmodules"],
+		};
+		const report = await executeStep(step);
+		reports.push(report);
+
+		if (options.verbose) {
+			console.log(
+				`[OK ] ${step.name} (${report.result.durationMs} ms, exit ${String(report.result.code)})`,
+			);
+		}
+
+		return;
+	}
+
+	const started = Date.now();
+	await copyLocalTheme(options.themePath, destination);
+
+	// Sanity check: a usable theme must at least expose theme.toml and layouts.
+	await assertFileExists(join(destination, "theme.toml"));
+	await assertFileExists(join(destination, "layouts"));
+
+	if (options.verbose) {
+		console.log(
+			`[OK ] Copied local theme from ${options.themePath} (${Date.now() - started} ms)`,
+		);
+	}
+}
+
+/**
+ * Run a list of command steps with consistent logging and reporting.
+ *
+ * @param steps Steps to execute in order.
+ * @param options Runtime options.
+ * @param projectRoot Absolute path to the temporary quickstart project.
+ * @param reports Accumulated step reports (appended to).
+ */
+async function runSteps(
+	steps: StepDefinition[],
+	options: RoutineOptions,
+	projectRoot: string,
+	reports: StepReport[],
+): Promise<void> {
+	for (const step of steps) {
+		if (options.verbose) {
+			console.log(`\n[RUN] ${step.name}`);
+			console.log(`      ${formatCommand(step.command, step.args)}`);
+		}
+
+		const report = isHugoBuildCommand(step)
+			? await executeHugoBuildStep(step, projectRoot)
+			: await executeStep(step);
+
+		reports.push(report);
+
+		if (options.verbose) {
+			console.log(
+				`[OK ] ${step.name} (${report.result.durationMs} ms, exit ${String(report.result.code)})`,
+			);
+
+			const trimmedOutput = report.result.combined.trim();
+			if (trimmedOutput) {
+				console.log(trimmedOutput);
+			}
+		}
+	}
+}
+
+/**
  * Run the full Hugo quickstart verification routine.
  *
  * @param options Runtime options.
@@ -675,7 +1111,8 @@ async function runRoutine(options: RoutineOptions): Promise<number> {
 
 	const reports: StepReport[] = [];
 
-	const steps: StepDefinition[] = [
+	// Steps that prepare the project before the theme is installed.
+	const setupSteps: StepDefinition[] = [
 		{
 			name: "Create Hugo project",
 			command: "hugo",
@@ -690,13 +1127,10 @@ async function runRoutine(options: RoutineOptions): Promise<number> {
 			cwd: projectRoot,
 			expectedFiles: [".git"],
 		},
-		{
-			name: "Add theme as Git submodule",
-			command: "git",
-			args: ["submodule", "add", options.themeRepo, options.themeDir],
-			cwd: projectRoot,
-			expectedFiles: [options.themeDir, ".gitmodules"],
-		},
+	];
+
+	// Steps that run once the theme is in place.
+	const buildSteps: StepDefinition[] = [
 		{
 			name: "Configure theme in Hugo config",
 			command: "bash",
@@ -719,30 +1153,15 @@ async function runRoutine(options: RoutineOptions): Promise<number> {
 	try {
 		console.log(`Test root: ${sandboxRoot}`);
 		console.log(`Project root: ${projectRoot}`);
+		console.log(
+			options.themeSource === "submodule"
+				? `Theme source: submodule (${options.themeRepo})`
+				: `Theme source: local (${options.themePath})`,
+		);
 
-		for (const step of steps) {
-			if (options.verbose) {
-				console.log(`\n[RUN] ${step.name}`);
-				console.log(`      ${formatCommand(step.command, step.args)}`);
-			}
-
-			const report = isHugoBuildCommand(step)
-				? await executeHugoBuildStep(step, projectRoot)
-				: await executeStep(step);
-
-			reports.push(report);
-
-			if (options.verbose) {
-				console.log(
-					`[OK ] ${step.name} (${report.result.durationMs} ms, exit ${String(report.result.code)})`,
-				);
-
-				const trimmedOutput = report.result.combined.trim();
-				if (trimmedOutput) {
-					console.log(trimmedOutput);
-				}
-			}
-		}
+		await runSteps(setupSteps, options, projectRoot, reports);
+		await installTheme(options, projectRoot, reports);
+		await runSteps(buildSteps, options, projectRoot, reports);
 
 		const configPath = join(projectRoot, options.configFile);
 		const homepagePath = join(projectRoot, "public/index.html");
@@ -884,6 +1303,112 @@ async function runRoutine(options: RoutineOptions): Promise<number> {
 
 		await assertDraftHiddenInProduction(projectRoot, homepagePath);
 		console.log("[OK ] Production build should exclude draft content");
+
+		console.log("\n[RUN] Configurable hero header section class (issue #504)");
+		await writeHeaderSectionClassFixtures(join(projectRoot, "content"));
+		const headerSectionBuildStep: StepDefinition = {
+			name: "Build site with configurable header section fixtures",
+			command: "hugo",
+			args: [],
+			cwd: projectRoot,
+			expectedFiles: [
+				"public/custom-header/index.html",
+				"public/default-header/index.html",
+			],
+		};
+		const headerSectionBuildReport = await executeHugoBuildStep(
+			headerSectionBuildStep,
+			projectRoot,
+		);
+		reports.push(headerSectionBuildReport);
+
+		if (options.verbose) {
+			console.log(
+				`      ${formatCommand(headerSectionBuildStep.command, headerSectionBuildStep.args)}`,
+			);
+			console.log(
+				`[OK ] ${headerSectionBuildStep.name} (${headerSectionBuildReport.result.durationMs} ms, exit ${String(headerSectionBuildReport.result.code)})`,
+			);
+
+			const trimmedOutput = headerSectionBuildReport.result.combined.trim();
+			if (trimmedOutput) {
+				console.log(trimmedOutput);
+			}
+		}
+
+		await assertHeaderSectionClassConfigurable(projectRoot);
+		console.log("[OK ] Configurable hero header section class (issue #504)");
+
+		console.log("\n[RUN] List page image cards and summary dates (issue #217)");
+		await writeListCardFixtures(join(projectRoot, "content"));
+		const cardsListPath = join(
+			projectRoot,
+			"public",
+			"cards",
+			"index.html",
+		);
+
+		// Default configuration: no image cards, but dates show by default.
+		await writeTextFile(
+			configPath,
+			[
+				"baseURL = 'https://example.com/'",
+				"title = 'Ananke Test Quickstart'",
+				`theme = '${options.themeName}'`,
+				"",
+			].join("\n"),
+		);
+		const cardsDefaultBuildStep: StepDefinition = {
+			name: "Build site with default summary cards",
+			command: "hugo",
+			args: [],
+			cwd: projectRoot,
+			expectedFiles: ["public/cards/index.html"],
+		};
+		const cardsDefaultBuildReport = await executeHugoBuildStep(
+			cardsDefaultBuildStep,
+			projectRoot,
+		);
+		reports.push(cardsDefaultBuildReport);
+		assertListCardSummaries(
+			await readTextFile(cardsListPath),
+			"defaults",
+			{ images: false, dates: true },
+		);
+
+		// Opt in to image cards and disable summary dates: images appear and the
+		// dates disappear, proving the two settings are independent.
+		await writeTextFile(
+			configPath,
+			[
+				"baseURL = 'https://example.com/'",
+				"title = 'Ananke Test Quickstart'",
+				`theme = '${options.themeName}'`,
+				"[params.ananke.pages]",
+				"show_list_images = true",
+				"show_date = false",
+				"",
+			].join("\n"),
+		);
+		const cardsImagesBuildStep: StepDefinition = {
+			name: "Build site with image cards and dates disabled",
+			command: "hugo",
+			args: [],
+			cwd: projectRoot,
+			expectedFiles: ["public/cards/index.html"],
+		};
+		const cardsImagesBuildReport = await executeHugoBuildStep(
+			cardsImagesBuildStep,
+			projectRoot,
+		);
+		reports.push(cardsImagesBuildReport);
+		assertListCardSummaries(
+			await readTextFile(cardsListPath),
+			"image cards with dates disabled",
+			{ images: true, dates: false },
+		);
+
+		console.log("[OK ] List page image cards and summary dates (issue #217)");
 
 		console.log("\nResult: PASS");
 

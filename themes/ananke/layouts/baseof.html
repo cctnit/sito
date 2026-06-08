@@ -72,10 +72,21 @@
   {{- if .IsSection -}}{{- $body_classes = $body_classes | append "is-section" -}}{{- end -}}
 
   <body class="{{ delimit $body_classes " " }}">
+    {{- partials.Include "hook.html" (dict "hook" "body-start" "context" .) -}}
+    {{- partials.Include "hook.html" (dict "hook" "header-before" "context" .) -}}
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
+    {{- partials.Include "hook.html" (dict "hook" "header-after" "context" .) -}}
     <main class="pb7" role="main">
+      {{- partials.Include "hook.html" (dict "hook" "main-before" "context" .) -}}
       {{ block "main" . }}{{ end }}
+      {{- partials.Include "hook.html" (dict "hook" "main-after" "context" .) -}}
     </main>
+    {{- partials.Include "hook.html" (dict "hook" "footer-before" "context" .) -}}
     {{ block "footer" . }}{{ partials.IncludeCached "site-footer.html" . }}{{ end }}
+    {{- partials.Include "hook.html" (dict "hook" "footer-after" "context" .) -}}
+    {{- partials.Include "hook.html" (dict "hook" "body-end" "context" .) -}}
   </body>
 </html>
+{{- with (templates.Defer (dict "key" "hooks-collector")) -}}
+  {{- partials.Include "func/hooks/collector-dump.html" . }}
+{{ end -}}

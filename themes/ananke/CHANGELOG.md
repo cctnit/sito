@@ -1,5 +1,181 @@
 # Changelog
 
+## [2.19.0](https://github.com/gohugo-ananke/ananke/compare/v2.18.0...v2.19.0) (2026-06-07)
+
+### Features
+
+* add edit-page shortcode for GitHub edit links ([#1028](https://github.com/gohugo-ananke/ananke/issues/1028)) ([688f358](https://github.com/gohugo-ananke/ananke/commit/688f3584ad4d3625cd001855c1f01448316252ba))
+
+### Bug Fixes
+
+* normalise GoHugo to Hugo ([45143b5](https://github.com/gohugo-ananke/ananke/commit/45143b564b99709c2c23664de0bbcb7b1d30b17e))
+* various changes to workspace, testing, linting, etc. ([c43eae2](https://github.com/gohugo-ananke/ananke/commit/c43eae25528e08a19e9bf4af4d5753ab814a1179))
+
+### Build
+
+* **vscode:** update workspace configuration ([9e1d7b9](https://github.com/gohugo-ananke/ananke/commit/9e1d7b96a2998887d174adf592b7f98adc4af14b))
+
+### Documentation
+
+* **ai:** add release notes prompt ([606eaac](https://github.com/gohugo-ananke/ananke/commit/606eaacd6cef65903078ab9b9f4550db53da96c0))
+
+## [2.18.0](https://github.com/gohugo-ananke/ananke/compare/v2.17.1...v2.18.0) (2026-06-07)
+
+### Features
+
+* add layout hooks head/body-start/end, header/main/content/footer-before/after ([66247c8](https://github.com/gohugo-ananke/ananke/commit/66247c8cc7544c4d736deb83705b731d1a1d6687))
+* add layout hooks head/body-start/end, header/main/content/footer-before/after ([cc579e8](https://github.com/gohugo-ananke/ananke/commit/cc579e8ae36756d246eb4f6be1c69e38976f9cef))
+* add since shortcode for release badges ([#1018](https://github.com/gohugo-ananke/ananke/issues/1018)) ([fb71d10](https://github.com/gohugo-ananke/ananke/commit/fb71d100fe069244d1fcbe3f48c976ab7a0558e2))
+* add since shortcode for release badges ([#1018](https://github.com/gohugo-ananke/ananke/issues/1018)) ([ddfc42c](https://github.com/gohugo-ananke/ananke/commit/ddfc42c738d12303b442a6fd12e7cabc6eef614d))
+* copy-to-clipboard buttons for code blocks ([#986](https://github.com/gohugo-ananke/ananke/issues/986)) ([1d96734](https://github.com/gohugo-ananke/ananke/commit/1d9673468505eaad912ebb7b9b6d601ac2b5bf60)), closes [#985](https://github.com/gohugo-ananke/ananke/issues/985)
+* copy-to-clipboard buttons for code blocks ([#986](https://github.com/gohugo-ananke/ananke/issues/986)) ([8c3143a](https://github.com/gohugo-ananke/ananke/commit/8c3143a220e69752c9434b15309c75145b99b896)), closes [#985](https://github.com/gohugo-ananke/ananke/issues/985)
+* make section link above article title clickable and configurable ([d343f0b](https://github.com/gohugo-ananke/ananke/commit/d343f0b8575a02a872f4cfbde314da4d0b60b53c))
+* show categories on posts ([#973](https://github.com/gohugo-ananke/ananke/issues/973)) ([52ec6cd](https://github.com/gohugo-ananke/ananke/commit/52ec6cd4b85f0d861100c6ab78bc2f8d3f073675)), closes [#620](https://github.com/gohugo-ananke/ananke/issues/620) [gohugo-ananke/documentation#18](https://github.com/gohugo-ananke/documentation/issues/18)
+* show categories on posts ([#973](https://github.com/gohugo-ananke/ananke/issues/973)) ([c806c1c](https://github.com/gohugo-ananke/ananke/commit/c806c1cf1b8bc98068ffef9cfd551a73711dcdc1)), closes [#620](https://github.com/gohugo-ananke/ananke/issues/620) [gohugo-ananke/documentation#18](https://github.com/gohugo-ananke/documentation/issues/18)
+
+### Bug Fixes
+
+* allow images in list summary cards ([#971](https://github.com/gohugo-ananke/ananke/issues/971)) ([713bb6d](https://github.com/gohugo-ananke/ananke/commit/713bb6dd58f4e4bb1db3ca1b8e56e385016b06ea)), closes [gohugo-ananke/documentation#13](https://github.com/gohugo-ananke/documentation/issues/13)
+* allow images in list summary cards ([#971](https://github.com/gohugo-ananke/ananke/issues/971)) ([c88d2fc](https://github.com/gohugo-ananke/ananke/commit/c88d2fc98c6b84d847f06b5f1b644d6dadb2299a)), closes [gohugo-ananke/documentation#13](https://github.com/gohugo-ananke/documentation/issues/13)
+* font size definition for in-paragraph code ([502c676](https://github.com/gohugo-ananke/ananke/commit/502c676249dbc14011e965d84f91c8a8ee6d9701))
+* font size definition for in-paragraph code ([da07193](https://github.com/gohugo-ananke/ananke/commit/da071934f9c4fa85c9c8ef0102b3af6c2759a0c2))
+* generate responsive hero background images ([#970](https://github.com/gohugo-ananke/ananke/issues/970)) ([9570264](https://github.com/gohugo-ananke/ananke/commit/9570264992f1f4923255bd8522a99c5552595d65)), closes [#362](https://github.com/gohugo-ananke/ananke/issues/362) [gohugo-ananke/documentation#14](https://github.com/gohugo-ananke/documentation/issues/14) [#362](https://github.com/gohugo-ananke/ananke/issues/362)
+* generate responsive hero background images ([#970](https://github.com/gohugo-ananke/ananke/issues/970)) ([7abd905](https://github.com/gohugo-ananke/ananke/commit/7abd905913a476061ff6880f645c2ce2e1092278)), closes [#362](https://github.com/gohugo-ananke/ananke/issues/362) [gohugo-ananke/documentation#14](https://github.com/gohugo-ananke/documentation/issues/14) [#362](https://github.com/gohugo-ananke/ananke/issues/362) [#540](https://github.com/gohugo-ananke/ananke/issues/540)
+* make header height configurable ([#972](https://github.com/gohugo-ananke/ananke/issues/972)) ([634cc09](https://github.com/gohugo-ananke/ananke/commit/634cc090072fbc2f99eaef4a19639c016e3e245c)), closes [#504](https://github.com/gohugo-ananke/ananke/issues/504) [gohugo-ananke/documentation#20](https://github.com/gohugo-ananke/documentation/issues/20)
+* make header height configurable ([#972](https://github.com/gohugo-ananke/ananke/issues/972)) ([de31c71](https://github.com/gohugo-ananke/ananke/commit/de31c71c2a3b3235fec0783521d5104ff41ec566)), closes [#504](https://github.com/gohugo-ananke/ananke/issues/504) [gohugo-ananke/documentation#20](https://github.com/gohugo-ananke/documentation/issues/20)
+
+### Build
+
+* **deps:** update dependencies ([3395d1f](https://github.com/gohugo-ananke/ananke/commit/3395d1f354e9045ea21d36d6af21f18eba1a013e))
+* **fix:** proper discussion category for GH release ([2b51bf7](https://github.com/gohugo-ananke/ananke/commit/2b51bf775e658d8d10e7815ffa948612cdcb3e17))
+* **fix:** proper discussion category for GH release ([0a0bc21](https://github.com/gohugo-ananke/ananke/commit/0a0bc2107d420d1fe01dd5316f88c54c233c3c91))
+* **vscode:** update workspace configuration ([90a7775](https://github.com/gohugo-ananke/ananke/commit/90a7775039fce92f8ce83c4f6f870a128a49b7cc))
+
+### Documentation
+
+* **ai:** update issue prompt ([2eb476f](https://github.com/gohugo-ananke/ananke/commit/2eb476fd782d758ef42f90a83d96ffa3edc3f9f8))
+* **ai:** update issue prompt ([81f0cfe](https://github.com/gohugo-ananke/ananke/commit/81f0cfe2a3ae0fdf6b89673531ad5a6699661546))
+
+### Tests
+
+* scaffold Playwright + axe testing PoC ([#1004](https://github.com/gohugo-ananke/ananke/issues/1004)) ([2d2116e](https://github.com/gohugo-ananke/ananke/commit/2d2116e1143a2214b9f1469d56803f0b06977869))
+
+## [2.17.1](https://github.com/gohugo-ananke/ananke/compare/v2.17.0...v2.17.1) (2026-06-06)
+
+### Bug Fixes
+
+* apply configured social colours on hover for follow and share ([#861](https://github.com/gohugo-ananke/ananke/issues/861)) ([#979](https://github.com/gohugo-ananke/ananke/issues/979)) ([237551f](https://github.com/gohugo-ananke/ananke/commit/237551fcb68055aa8344e83b1d31773fe7c2e653))
+* test local working tree in quickstart test ([#938](https://github.com/gohugo-ananke/ananke/issues/938)) ([#978](https://github.com/gohugo-ananke/ananke/issues/978)) ([d545fdf](https://github.com/gohugo-ananke/ananke/commit/d545fdff144cebdd9358b1b14c0c168b03a7fd0b))
+
+### Build
+
+* **deps-dev:** bump @biomejs/biome from 2.4.15 to 2.4.16 ([#977](https://github.com/gohugo-ananke/ananke/issues/977)) ([ccbcc32](https://github.com/gohugo-ananke/ananke/commit/ccbcc324c3bc396cc2f4d608c1b4c0db22bbe112))
+* **deps-dev:** bump @types/node from 25.8.0 to 25.9.1 ([#976](https://github.com/gohugo-ananke/ananke/issues/976)) ([8743905](https://github.com/gohugo-ananke/ananke/commit/87439054b061727f957b489db9e74ceb37f8c524))
+* **deps-dev:** bump lint-staged from 17.0.4 to 17.0.5 ([#975](https://github.com/gohugo-ananke/ananke/issues/975)) ([447ede2](https://github.com/gohugo-ananke/ananke/commit/447ede2ada00932a707179bcaaa59763696ce0e2))
+* **deps:** bump postcss from 8.5.14 to 8.5.15 ([#974](https://github.com/gohugo-ananke/ananke/issues/974)) ([7cd8756](https://github.com/gohugo-ananke/ananke/commit/7cd8756d3846ea90447aae85ee02de8698dec655))
+
+### Chores
+
+* update gitignore ([#981](https://github.com/gohugo-ananke/ananke/issues/981)) ([24426cb](https://github.com/gohugo-ananke/ananke/commit/24426cbd2549b7fc7d6ca8b2fea98edf348bd78b))
+
+## [2.17.0](https://github.com/gohugo-ananke/ananke/compare/v2.16.0...v2.17.0) (2026-05-17)
+
+### Features
+
+* theme hooks and filters ([#964](https://github.com/gohugo-ananke/ananke/issues/964)) ([6dedd8e](https://github.com/gohugo-ananke/ananke/commit/6dedd8ebbc8a25bcd34669201853861d836d12e6))
+
+### Bug Fixes
+
+* remove deprecated partials ([9dc44d5](https://github.com/gohugo-ananke/ananke/commit/9dc44d5b04092c54a2a16ce03a41423a7a434572))
+* remove external link indicator from social icons ([1a185ea](https://github.com/gohugo-ananke/ananke/commit/1a185ea6b62acad9dfebcf57c6ecbcd1b902a2e6))
+* remove font size from code highlighting ([399075e](https://github.com/gohugo-ananke/ananke/commit/399075ed6fdb2abd7afe04019b1b912e4099773c))
+* remove stray overflow from code highlighting ([09d711c](https://github.com/gohugo-ananke/ananke/commit/09d711ccf52aa944e662c5e2ac0cf2fd109ce3c6))
+* rename theme styles from main.css to theme.css ([918148e](https://github.com/gohugo-ananke/ananke/commit/918148e0d10f438b26d4893a69fde4bb713e81c0))
+* slightly larger font size in code blocks ([9cac210](https://github.com/gohugo-ananke/ananke/commit/9cac2102da3dbc771195ad7fd4ed9c4bac7cc4ff))
+* support images array for featured image ([#967](https://github.com/gohugo-ananke/ananke/issues/967)) ([ad43367](https://github.com/gohugo-ananke/ananke/commit/ad433679f34ff636f07026d42b21ffeb3dd54e97)), closes [gohugo-ananke/documentation#10](https://github.com/gohugo-ananke/documentation/issues/10) [#77](https://github.com/gohugo-ananke/ananke/issues/77)
+
+### Build
+
+* **config:** update workspace configuration ([bcc90b5](https://github.com/gohugo-ananke/ananke/commit/bcc90b5cbbc14f3a556c064dfe54abb52107a144))
+* **fix:** create a release on github when publishing a new release ([d72fdad](https://github.com/gohugo-ananke/ananke/commit/d72fdad1ef44bbbf6f91a488bc9334c384c8bae8))
+* **fix:** create discussion on release ([9a5cadd](https://github.com/gohugo-ananke/ananke/commit/9a5cadd1058926426fdc419e379145304577ce33))
+
+### CI
+
+* **fix:** do not check the whole code base on TS changes ([998b060](https://github.com/gohugo-ananke/ananke/commit/998b060a26963eca175439ce55579ef69cce66fb))
+
+## [2.16.0](https://github.com/gohugo-ananke/ananke/compare/v2.15.0...v2.16.0) (2026-05-16)
+
+### Features
+
+* rework stylesheet pipeline ([f78134c](https://github.com/gohugo-ananke/ananke/commit/f78134c2724d6c12ebe183e3e592f469c2da806b))
+
+### Build
+
+* **deps:** update bundled Tachyons from 4.9.1 to 4.12.0 ([433ef8f](https://github.com/gohugo-ananke/ananke/commit/433ef8f9c3c941975dab935122445c22d837bb47))
+* **fix:** run test only on main branch push hook ([148aa95](https://github.com/gohugo-ananke/ananke/commit/148aa9512b269231196ee0cf30a950a62d54f881))
+* **fix:** update version numbers and fix release setup ([29f0f4d](https://github.com/gohugo-ananke/ananke/commit/29f0f4df0774f5c91ff25ed67b72c751919f6e8d))
+
+## [2.14.0](https://github.com/gohugo-ananke/ananke/compare/v2.13.3...v2.14.0) (2026-05-15)
+
+### Features
+
+* add simple icons and maintenance script ([f6fa927](https://github.com/gohugo-ananke/ananke/commit/f6fa927de83e1ec49be7e0656d6c6d932e230f5f))
+
+### Build
+
+* **fix:** remove improper cooldown config for GH actions ([079b757](https://github.com/gohugo-ananke/ananke/commit/079b757e38d6d6806e8661bf72f136cf57f0ccfe))
+* **fix:** smaller fixes to the release configuration ([0672476](https://github.com/gohugo-ananke/ananke/commit/067247654333afb79151a19b5e3b75b6908f40be))
+* **fix:** update release setup ([229588b](https://github.com/gohugo-ananke/ananke/commit/229588be6961d020af2f1e9557199bfb69a32ae7))
+
+## [2.13.3](https://github.com/gohugo-ananke/ananke/compare/v2.13.2...v2.13.3) (2026-05-15)
+
+### Build
+
+* **fix:** proper release key attribution ([59b44f2](https://github.com/gohugo-ananke/ananke/commit/59b44f2d9d51d4b56be75a90409894c242a38ff2))
+
+## [2.13.2](https://github.com/gohugo-ananke/ananke/compare/v2.13.1...v2.13.2) (2026-05-15)
+
+### Build
+
+* **fix:** proper release key attribution ([db5561d](https://github.com/gohugo-ananke/ananke/commit/db5561d78a249902f8aa9cd3e79e73ace414292f))
+
+## [2.13.1](https://github.com/gohugo-ananke/ananke/compare/v2.13.0...v2.13.1) (2026-05-15)
+
+### Build
+
+* **deps-dev:** bump @release-it/conventional-changelog from 10.0.6 to 11.0.0 ([#953](https://github.com/gohugo-ananke/ananke/issues/953)) ([c3ada3f](https://github.com/gohugo-ananke/ananke/commit/c3ada3fa46e89a6f565bdb6fe72c733da2ed3ec0))
+* **deps-dev:** bump release-it from 19.2.4 to 20.0.1 ([#954](https://github.com/gohugo-ananke/ananke/issues/954)) ([50a4ce9](https://github.com/gohugo-ananke/ananke/commit/50a4ce99140cfacfb00ebe5f693a802f5f756254))
+* **deps:** bump actions/checkout from 4 to 6 ([#945](https://github.com/gohugo-ananke/ananke/issues/945)) ([5d40ea3](https://github.com/gohugo-ananke/ananke/commit/5d40ea3fe961f99dbc45bb461acfd13a00b65af8))
+* **deps:** bump actions/setup-node from 4 to 6 ([#946](https://github.com/gohugo-ananke/ananke/issues/946)) ([dc0a822](https://github.com/gohugo-ananke/ananke/commit/dc0a8223b3dd020543ece8d0013ef8bcf40a515b))
+* **deps:** bump postcss from 8.5.10 to 8.5.13 ([#955](https://github.com/gohugo-ananke/ananke/issues/955)) ([ed5f168](https://github.com/gohugo-ananke/ananke/commit/ed5f168c0f42f98386b80a4c48056ee22de79446))
+* **deps:** bump the npm_and_yarn group across 1 directory with 2 updates ([#956](https://github.com/gohugo-ananke/ananke/issues/956)) ([09a1dea](https://github.com/gohugo-ananke/ananke/commit/09a1dea357e39ea352fa75d80c621d9cbc17b582))
+* **deps:** update dependencies ([9347892](https://github.com/gohugo-ananke/ananke/commit/9347892f1d62c7acd1bac3b8dce76d10febfe7ac))
+* **fix:** always use latest node version ([17401b9](https://github.com/gohugo-ananke/ananke/commit/17401b98ee421fbb6b67709d3a994a6026d5700d))
+* **fix:** dependabot must pull agains development branch ([036acd7](https://github.com/gohugo-ananke/ananke/commit/036acd7f24f591002f31786686255a1bf93e9d91))
+* rework release configuration ([2b6c1fe](https://github.com/gohugo-ananke/ananke/commit/2b6c1fe20cd829bf5f95637d60d68ebe6058f542))
+
+### Chores
+
+* set up branch protection rules and workflows ([c0c179c](https://github.com/gohugo-ananke/ananke/commit/c0c179cf95878ef908d70396bc8a724f7a56c8a0))
+* update package.json ([aaa7016](https://github.com/gohugo-ananke/ananke/commit/aaa701650f6f8d298811b178b1e8988526dbc38b))
+
+### CI
+
+* **fix:** allow quickstart workflow to run on request ([a1dd0f6](https://github.com/gohugo-ananke/ananke/commit/a1dd0f637c8188b91030ccffe1754489ac586234))
+* **fix:** lint only staged markdown files ([60eb57d](https://github.com/gohugo-ananke/ananke/commit/60eb57dfcd86615f58f2db50e843e9760614760d))
+* update branch setup/rules and CONTRIBUTING.md ([c336f54](https://github.com/gohugo-ananke/ananke/commit/c336f54315f4d3a8f80c2b8c82a0055037e7bf76))
+
+### Documentation
+
+* add AI contributor guide to CONTRIBUTING.md ([a819d1e](https://github.com/gohugo-ananke/ananke/commit/a819d1ece3d6819dd8bde48688cff345ce65f5cd))
+* **ai:** add DESIGN.md with initial setup ([d262f3a](https://github.com/gohugo-ananke/ananke/commit/d262f3a379bc0680717f6c0a98f532d189324f88))
+* **ai:** add issue analysis prompt ([437d60c](https://github.com/gohugo-ananke/ananke/commit/437d60c6d68f009db08d6b73c774710d6164ada2))
+* **ai:** fix test script prompt ([d569659](https://github.com/gohugo-ananke/ananke/commit/d56965905f35c7279eab961ed37e326dec36fd09))
+* **ai:** update issue analysis prompt with documentation instructions ([c5c37be](https://github.com/gohugo-ananke/ananke/commit/c5c37bee8b5fb3c1272cdee9fcbc8c36468ee513))
+* **fix:** update links to documentation repository ([feb14b2](https://github.com/gohugo-ananke/ananke/commit/feb14b2cfff4ae1caed4e7d6fc1e529731ab834f))
+* **readme:** link to deployed documentation ([#959](https://github.com/gohugo-ananke/ananke/issues/959)) ([f63ea20](https://github.com/gohugo-ananke/ananke/commit/f63ea2005a5bad0fbc733a641fea5c20380c32fa))
+
 ## [2.13.0](https://github.com/gohugo-ananke/ananke/compare/v2.13.0-prerelease.2...v2.13.0) (2026-04-24)
 
 ## [2.13.0-prerelease.2](https://github.com/gohugo-ananke/ananke/compare/v2.13.0-prerelease.1...v2.13.0-prerelease.2) (2026-04-24)
