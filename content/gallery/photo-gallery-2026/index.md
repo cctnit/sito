@@ -16,6 +16,10 @@ album:
     album_img: "CarnevaleFoiano.jpg"
     link: "https://photos.app.goo.gl/3ZsXuvTGyPLx5pFK9"
     alt: "Maschere del Carnevale di Foiano"
+  - title: "Grande vuelta de Espana"
+    album_img: "Spagna.jpg"
+    link: "https://photos.app.goo.gl/aija99NUT4H9JXrXA"
+    alt: "La Sagrada Familia"
 
 
 ---
