@@ -11,7 +11,7 @@ other = "Recenti {{.Title }}"
 other = "leggi di più"
 
 [by]
-other = "di: "
+other = "Da"
 
 [whatsInThis]
 other = "Cosa c'è in {{ .Type }}"

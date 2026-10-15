@@ -5,7 +5,7 @@
 
 {{ define "main" }}
 
-  {{- $related_content := .RegularPages.Related . -}}
+  {{- $related_content := .Site.RegularPages.Related . -}}
   {{- $needs_aside := or .Params.toc $related_content -}}
   {{ $page := .}}
   {{ $section := .Site.GetPage "section" .Section }}
@@ -20,8 +20,6 @@
     <header class="mt4 w-100">
       {{- partials.Include "hook.html" ( dict "hook" "article/section-link"  "context" . ) -}}
       {{- partials.IncludeCached "social/share.html" . . -}}
-
-
       <h1 class="f1 athelas mt3 mb1">
         {{- .Title -}}
       </h1>
